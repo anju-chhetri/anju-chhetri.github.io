@@ -1,22 +1,68 @@
-/*************************************************************************
- * This css file is for your own style.
- *************************************************************************/
 
-#me {
+/* #me {
   width: 180px;
   border-radius: 50%;
+} */
+
+/* For social media  */
+.social {
+  margin-top: 40px;
+  margin-bottom: 20px;
+  text-align: center  ;
+
 }
 
-.flex-item-stretch-6 {
-  flex: 1 auto;
+.social a {
+  color: #6c757d;
+  padding: 5px;
+  border-radius: 10%;
+  font-size: 25px;
+  margin: 5px;
+  text-align:center; 
+  cursor: pointer;
+  transition: transform 0.2s ease;
 }
 
-.max-width-600 {
-  max-width: 900px;
+.fa {
+  padding: 5px;
+  font-size: 30px;
+  width: 30px;
+  text-decoration: none;
+  border-radius: 50%;
+  height: 0.1px;
+  
 }
 
-@media screen and (min-width: 900px) {
-  .flex-item-stretch-6 {
-    flex: 5.5;
-  }
+.fa-github:hover {
+  color: #461165;
+  text-decoration: none;
+  transform: scale(1.2);
+} 
+
+.fa-linkedin:hover {
+  color: #0077b5;
+}
+
+/* For CV button */
+.buttonDiv {
+  margin: 10px 9px 10px 5px;
+  text-align:center; 
+
+}
+
+.resumeButton {
+  padding: 8px 10px;
+  margin-bottom: 10px;
+  border: none;
+  background-color: #6c757d;
+  border-radius: 5px;
+  color: white;
+  
+
+}
+
+.resumeButton:hover {
+  text-decoration: none;
+  background-color: #461165;
+  color: white;
 }
