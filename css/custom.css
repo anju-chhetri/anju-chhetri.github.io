@@ -1,13 +1,15 @@
 
 #me {
   width: 180px;
-  border-radius: 50%;
+  border-radius: 0%; 
+   /* For making circular(100) */
 }
 
 
 
 body{
   margin: 0px;
+  margin-left: 20px;
 }
 
 main{
@@ -20,6 +22,15 @@ h1{
   text-align: center;
 }
 
+/* Header info */
+
+.hero {
+  background-color: white;
+  height: 15vh;
+  position: relative;
+  color: #461165;
+}
+
 
 /* For navigation bar */
 
@@ -30,7 +41,7 @@ h1{
   z-index: 100;
   /* box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.3); */
   color: gray;
-  font-family: "Lora", serif;
+  font-family: 'Open Sans', Helvetica, Arial, sans-serif;
   background-color: white;
   
 }
@@ -102,7 +113,8 @@ float: right;
 
 /* Navigation Bar Ends */
 
-.flex-row {
+
+/* .flex-row {
   display: flex;
   text-align: center;
   flex-direction: row;
@@ -111,7 +123,7 @@ float: right;
   align-items: center;
   align-content: stretch;
   box-sizing: border-box;
-}
+} */
 
 .flex-column {
   display: flex;
@@ -129,21 +141,40 @@ float: right;
 
 /* For displaying image */
 
+img{
+  float: left;  
+  margin-right: 20px;
+  /* space between image and text */
+}
 .image-container {
-  position: relative;
+  display: flex;
+  /* align-items: center; */
+  /* justify-content: center */
 }
 
 .image-name {
+  float: left;  
+  margin-right: 20px;
   position: relative;
-  top: 5;
-  left: 0;
-  width: 100%;
+  top: 0;
+  left: 300px;
+  width: 200px;
+  height: 200px;
   background-color: rgba(0,0,0,0.5);
   color: white;
-  text-align: center;
+  /* text-align: center; */
   padding: 10px;
 }
 
+
+
+.image-text{
+  font-size: 20px;
+  padding-left: 300px;
+  padding-top: 0%;
+  float: left;
+  /* padding-left: 20px; */
+}
 
 /* For social media  */
 .social {
@@ -209,6 +240,11 @@ float: right;
   background-color: #112e65;
   color: white;
 }
+
+
+
+
+/* Image and Text */
 
 
 /* For Home Page decoration */
