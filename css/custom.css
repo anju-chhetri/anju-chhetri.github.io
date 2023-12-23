@@ -149,15 +149,14 @@ img{
 .image-container {
   display: flex;
   /* align-items: center; */
-  /* justify-content: center */
 }
 
 .image-name {
-  float: left;  
-  margin-right: 20px;
+  float: right;  
+  margin-right: 1px;
   position: relative;
   top: 0;
-  left: 300px;
+  left: 600px;
   width: 200px;
   height: 200px;
   background-color: rgba(0,0,0,0.5);
@@ -170,11 +169,26 @@ img{
 
 .image-text{
   font-size: 20px;
-  padding-left: 300px;
   padding-top: 0%;
   float: left;
-  /* padding-left: 20px; */
+  padding-left: 0px;
 }
+
+
+/* About me starts */
+
+.aboutme{
+  text-align: left;
+  font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+  margin-left: 200px;
+  margin-right: 150px;
+}
+
+.aboutme h2{
+  text-align: left;
+  font-size: 30px;
+}
+/* About me ends */
 
 /* For social media  */
 .social {
