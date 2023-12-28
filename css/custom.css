@@ -266,6 +266,32 @@ img{
 /* Awards section ends */
 
 
+
+
+/* Community Involvement Section begins */
+.community{
+  text-align: left;
+  font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+  margin-left: 200px;
+  margin-right: 150px;
+}
+
+.community h2{
+  text-align: left;
+  font-size: 30px;
+}   
+
+.community-date{
+  font-size: 15px;
+}
+
+.community-date{
+  font-size: 15px;
+}
+
+
+/* Community Involvement Section ends  */
+
 /* For social media  */
 .social {
   margin-top: 40px;
