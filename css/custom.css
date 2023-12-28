@@ -156,8 +156,8 @@ img{
   margin-right: 1px;
   position: relative;
   top: 0;
-  left: 600px;
-  width: 200px;
+  left: 500px;
+  width: 300px;
   height: 200px;
   background-color: rgba(0,0,0,0.5);
   color: white;
@@ -174,8 +174,9 @@ img{
   padding-left: 0px;
 }
 
+/* image display ends */
 
-/* About me starts */
+/* About section starts */
 
 .aboutme{
   text-align: left;
@@ -188,7 +189,82 @@ img{
   text-align: left;
   font-size: 30px;
 }
-/* About me ends */
+/* About section ends */
+
+
+/* Experience section begins */
+.experience{
+  text-align: left;
+  font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+  margin-left: 200px;
+  margin-right: 150px;
+}
+
+.experience h2{
+  text-align: left;
+  font-size: 30px;
+}   
+
+.experience-date{
+  font-size: 15px;
+}
+
+.experience-date{
+  font-size: 15px;
+}
+
+/* Experience section ends */
+
+
+/* Project section begins */
+.project{
+  text-align: left;
+  font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+  margin-left: 200px;
+  margin-right: 150px;
+}
+
+.project h2{
+  text-align: left;
+  font-size: 30px;
+}  
+
+.project h3{
+  text-align: left;
+  font-size: 15px;
+}   
+
+.project-name{
+  font-size: 20px;
+}
+
+.project-date{
+  font-size: 15px;
+
+}
+/* Project section ends */
+
+/* Awards section begins */
+.award{
+  text-align: left;
+  font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+  margin-left: 200px;
+  margin-right: 150px;
+}
+
+.table.award-table {
+  margin-top: 50px;
+  margin-bottom: 100px;
+  margin-left: 20px;
+  margin-right: 15px;  
+  border-collapse: collapse;
+
+}
+.table.award-table th, td{
+  border: 1px solid black;
+}
+/* Awards section ends */
+
 
 /* For social media  */
 .social {
@@ -262,3 +338,9 @@ img{
 
 
 /* For Home Page decoration */
+
+
+
+
+
+/* Look for spacing between sections */
