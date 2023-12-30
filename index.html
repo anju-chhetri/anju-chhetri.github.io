@@ -22,53 +22,36 @@
   <link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700' rel='stylesheet' type='text/css'>
   <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700" rel="stylesheet">
   
-  <!-- <script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
-    <script>
-        $(function(){
-            $('a').each(function(){
-                if ($(this).prop('href') == window.location.href) {
-                    $(this).addClass('active'); $(this).parents('li').addClass('active');
-                }
-            });
-        });
-    </script> -->
-
   <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> -->
-  <script src="js/menu.js"></script>
+  <!-- <script src="js/menu.js"></script> -->
 </head>
 
-<body id = "home">
+<body >
   <header class="hero">
+    <nav>
+      <div class="block-display">
+        <ul class=" nav-links" id = "nav-list">
 
-    <nav class="navbar navbar-expand-lg navbar-dark" id="navBar">
-      <div class="container">
-        <!-- Logo Section -->
-            <!-- Put Name Here -->
-        <!-- Navbar Section -->
-        <div class="block-display">
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav ml-auto" id="nav-list">
               <li class="nav-item">
                 <!-- <a href="/index.html" class='active-page'> Home </a> -->
-                <a data-active = "home" href="index.html">
+                <a  class = "active" href="index.html"
+                style="padding-left: 15000px"
+                >
                   Home
                   </a>
               </li>
 
-              <li class="nav-item">
+              <li class="nav-item"  >
                 <a
-                  data-active="volunteer"
-                  href="/volunteer.html"
+                  href="volunteer.html"
                   style="padding-left: 40px"
                   >
                   Volunteer
               </a>
               </li>
             </ul>
-        </div>
-    </div>
+      </div>
   </nav>
-
 </header>
   <!-- Navigation Bar Ends -->
 
@@ -77,7 +60,7 @@
 
   <!-- For image  -->
     <div class="image-container">
-      <img class="image-name" id="me" src="img/me.jpeg">
+      <img class="image-name" id="me" src="img/me.jpeg" >
       <div class="image-text">
         <h2>Anju Chhetri</h2>
       </div>
@@ -102,7 +85,7 @@
       <h2>Experience</h2>
       <ul class="experience-list">
           <li class="experience-item">
-            <h3> NepAl Applied Mathematics and Informatics Institute (NAAMII) </h3>
+            <p class="experience-name"> NepAl Applied Mathematics and Informatics Institute (NAAMII) </p>
             <p class= "experience-date"> <i> (August, 2023 - Present) </i></p>
             <p class= "experience-position"> Position: <b>Research Intern </b> </p>
 
@@ -218,11 +201,11 @@
 
       <!-- Community Involvement section begins-->
 
-   <div class="container community" id = "community">
+   <div class="community" id = "community">
     <h2>Community Involvement</h2>
     <ul class="community-list">
         <li class="community-item">
-          <h3> IT-Club, Pulchowk Campus </h3>
+          <p class="community-name"> IT-Club, Pulchowk Campus </p>
           <p class= "community-date"> <i> (December 2021 - February 2023) </i></p>
           <p class= "community-position"> Position: <b>Event Manager </b> </p>
 
@@ -236,7 +219,7 @@
         </li>
 
         <li class="community-item">
-          <h3>Robotics Club, Pulchowk Campus </h3>
+          <p class="community-name">Robotics Club, Pulchowk Campus </p>
           <p class= "community-date"> <i> (December 2019 - July 2022) </i></p>
           <p class= "community-position"> Position: <b>Student Member </b> </p>
 
