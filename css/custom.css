@@ -14,11 +14,11 @@ body{
   /* margin-top: 250px; */
 }
 
-main{
+/* main{
   margin-left: 25px;
   margin-right: 40px;
   margin-top: 0;
-}
+} */
 
 h1{
   text-align: center;
@@ -122,12 +122,13 @@ img{
 .image-container {
   display: flex;
   text-align: start;
-  flex-direction: row;
-  flex-wrap: wrap;
+  align-items: center;
+
+  /* flex-direction: row; */
+  /* flex-wrap: wrap;
   justify-content: flex-start;
-  align-items: start;
   align-content: stretch;
-  box-sizing: border-box;  
+  box-sizing: border-box;   */
   
 }
 
@@ -138,7 +139,7 @@ img{
   top: 0;
   left: 60px;
   height: auto;
-  width:100%;
+  /* width:100%; */
   /* width: 500px;
   height: auto; */
   /* height: 500px; */
@@ -154,6 +155,7 @@ img{
   padding-top: 0%;
   /* float: left; */
   margin-left: 200px;
+
   }
 
 
@@ -174,6 +176,7 @@ img{
 .aboutme h2{
   text-align: left;
   font-size: 35px;
+  line-height: 0.7;
 }
 /* About section ends */
 
@@ -190,6 +193,7 @@ img{
 
 .experience-name{
   font-size: 25px;
+  line-height: 0.2;
 }
 .experience-date{
   font-size: 22px;
@@ -210,8 +214,6 @@ img{
   margin-left: 200px;
   margin-right: 150px;
   font-size: 23px;
-
-
 }
 
 .project h2{
@@ -227,6 +229,7 @@ img{
 .project h3{
   text-align: left;
   font-size: 22px;
+  
 }   
 
 
@@ -275,6 +278,8 @@ img{
 
 .community-name{
   font-size: 25px;
+  line-height: 0.2;
+
 }
 
 .community h2{
