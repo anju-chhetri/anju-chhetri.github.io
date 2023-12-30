@@ -21,59 +21,48 @@
   <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
   <link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700' rel='stylesheet' type='text/css'>
   <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700" rel="stylesheet">
-  
+<!--   
+  <script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
+<script>
+    $(function(){
+        $('a').each(function(){
+            if ($(this).prop('href') == window.location.href) {
+                $(this).addClass('active'); $(this).parents('li').addClass('active');
+            }
+        });
+    });
+</script> -->
+
   <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> -->
-  <!-- <script src="js/menu.js"></script> -->
+  <script src="js/menu.js"></script>
 </head>
 
 <body>
   <header class="hero">
 
-    <nav class="navbar navbar-expand-lg navbar-dark" id="navBar">
-      <div class="container">
-        <!-- Logo Section -->
-            <!-- Put Name Here -->
-        <!-- Navbar Section -->
-        <div class="block-display">
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav ml-auto" id="nav-list">
+    <nav>
+      <div class="block-display">
+        <ul class=" nav-links" id = "nav-list">
+
               <li class="nav-item">
-                <a href="/index.html">
+                <!-- <a href="/index.html" class='active-page'> Home </a> -->
+                <a href="index.html"
+                style="padding-left: 15000px"
+                >
                   Home
-                </a>
-                <!-- <a class="nav-link active" href="/">
-                  Home <span class="sr-only">(current)</span>
-                  </a> -->
+                  </a>
               </li>
-              <!-- <li class="nav-item">
-                <a class="nav-link" href="#about" style="padding-left: 40px">
-                  About <span class="sr-only">(current)</span>
-                </a>
-              </li> -->
-              <li class="nav-item">
-                <a
-                  class="nav-link"
-                  href="/volunteer.html"
+
+              <li class="nav-item"  >
+                <a class = "active"
+                  href="volunteer.html"
                   style="padding-left: 40px"
-                  class = "active-page"
                   >
-                  Volunteer 
+                  Volunteer
               </a>
               </li>
-              <!-- <li class="nav-item">
-                <a class="nav-link" href="#blogs" style="padding-left: 40px">
-                  Blog <span class="sr-only">(current)</span>
-                </a>
-              </li> -->
-              <!-- <li class="nav-item">
-                <a class="nav-link" href="#contact" style="padding-left: 40px"
-                  >Contact <span class="sr-only">(current)</span>
-              </a>
-              </li> -->
             </ul>
-          </div>
-        </div>
-    </div>
+      </div>
   </nav>
 
 </header>
@@ -82,7 +71,7 @@
 
 
 
-<body>
+<body id = "volunteer">
 
   <!-- About section begins -->
   <div class="volunteer" id="volunteer" name="volunteer">
@@ -111,7 +100,7 @@
   <div class="volunteer-name" id="volunteer" name="volunteer">
 
     <!-- For image  -->
-      <img class="voluntImg-name" id="me" src="img/CIT.jpg" style="width:500px;height:auto;">
+      <img class="voluntImg-name" id="me" src="img/PaperReadingSession.jpg" style="width:500px;height:auto;">
       <div class="volunteer-text">
         <i> Date: 17th December, 2023</i><br>
         <p>I had the opportunity of being the <b>session leader</b> for the first paper reading event

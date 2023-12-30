@@ -34,10 +34,10 @@
     </script> -->
 
   <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> -->
-  <!-- <script src="js/menu.js"></script> -->
+  <script src="js/menu.js"></script>
 </head>
 
-<body>
+<body id = "home">
   <header class="hero">
 
     <nav class="navbar navbar-expand-lg navbar-dark" id="navBar">
@@ -49,27 +49,22 @@
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav ml-auto" id="nav-list">
               <li class="nav-item">
-                <a href="/index.html" class='active-page'> Home </a>
-                <!-- <a class="nav-link active" href="/">
-                  Home <span class="sr-only">(current)</span>
-                  </a> -->
+                <!-- <a href="/index.html" class='active-page'> Home </a> -->
+                <a data-active = "home" href="index.html">
+                  Home
+                  </a>
               </li>
-              <!-- <li class="nav-item">
-                <a class="nav-link" href="#about" style="padding-left: 40px">
-                  About <span class="sr-only">(current)</span>
-                </a>
-              </li> -->
+
               <li class="nav-item">
                 <a
-                  class="nav-link"
+                  data-active="volunteer"
                   href="/volunteer.html"
                   style="padding-left: 40px"
                   >
-                  Volunteer <span class="sr-only">(current)</span>
+                  Volunteer
               </a>
               </li>
             </ul>
-          </div>
         </div>
     </div>
   </nav>

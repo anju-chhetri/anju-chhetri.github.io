@@ -10,6 +10,7 @@
 body{
   margin: 0px;
   margin-left: 20px;
+  /* margin-top: 250px; */
 }
 
 main{
@@ -31,89 +32,64 @@ h1{
   color: #461165;
 }
 
+* {
 
+  margin: 0px;
+  /* Controls the area converted on top */
+  padding: 0px;
+
+  box-sizing: border-box;
+
+}
 /* For navigation bar */
 
-#navBar {
-  position: relative;
-  top: 0;
-  width: 95%;
-  z-index: 100;
-  /* box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.3); */
-  color: gray;
-  font-family: 'Open Sans', Helvetica, Arial, sans-serif;
-  background-color: white;
-  
+
+
+nav {
+
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  min-height: 8vh;
+  background-color: rgb(255, 255, 255);
+  font-family: "Montserrat", sans-serif;
 }
 
-.block-display div {
-  margin: 20px 0px 20px 0px;
-  display: block;
+
+
+.nav-links {
+  display: flex;
+  /* Responsible for bottom up kind of setup in navbar */
+  justify-content: space-around;
+  width: 10%;
+  /* Distance between topics on navbar */
+
+}
+
+.nav-links li {
+  list-style: none;
+/* Removes bulletin from topics */
+}
+
+.nav-links a {
+  color: rgb(18, 17, 17);
+  text-decoration: none;
+  /* letter-spacing: 3px; */
   font-weight: bold;
+  font-size: 20px;
+  padding: 700px 300px 16px;
 }
 
-#nav-list a {
-  -webkit-transition: 0.5s all ease-out;
-  -moz-transition: 0.5s all ease-out;
-  transition: 0.5s all ease-out;
-  border-top: 3px solid white;
-  font-size: 18px;
-}
-
-/* #nav-list li a.active-page {
-  color: #251d74;
+/* .nav-links a:hover:not(.active) {
+  background-color: white;
 } */
 
-#nav-list ul li a.active-page
-{
-  color: #251d74;
+.nav-links li a.active {
+  color:  #1d4224;
 }
 
-#nav-list .nav-link {
-  color: #999da0;
-}
 #nav-list a:hover {
-  color:  #251d74;
-}
-
-.dropbtn {
-  background-color: #461165;
-  color: white;
-  padding: 8px;
-  font-size: 16px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-.navbar-toggler-icon {
-  color: #f1f1f1;
-}
-
-.dropbtn:hover,
-.dropbtn:focus {
-  opacity: 0.8;
-}
-
-
-.show {
-  display: block;
-}
-
-.navbar a{
-  text-decoration: none;
-}
-
-
-.navbar li{
-  float: left;
-  list-style-type: none;
-  float: left;
-  overflow: hidden;
-}
-
-.navbar ul{
-float: right; 
+  color: #867d8b;
 }
 
 /* Navigation Bar Ends */
