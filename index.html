@@ -22,6 +22,17 @@
   <link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700' rel='stylesheet' type='text/css'>
   <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700" rel="stylesheet">
   
+  <!-- <script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <script>
+        $(function(){
+            $('a').each(function(){
+                if ($(this).prop('href') == window.location.href) {
+                    $(this).addClass('active'); $(this).parents('li').addClass('active');
+                }
+            });
+        });
+    </script> -->
+
   <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> -->
   <!-- <script src="js/menu.js"></script> -->
 </head>
@@ -38,9 +49,10 @@
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav ml-auto" id="nav-list">
               <li class="nav-item">
-                <a class="nav-link active" href="/">
+                <a href="/index.html" class='active-page'> Home </a>
+                <!-- <a class="nav-link active" href="/">
                   Home <span class="sr-only">(current)</span>
-                  </a>
+                  </a> -->
               </li>
               <!-- <li class="nav-item">
                 <a class="nav-link" href="#about" style="padding-left: 40px">
@@ -51,20 +63,11 @@
                 <a
                   class="nav-link"
                   href="/volunteer.html"
-                  style="padding-left: 40px">
+                  style="padding-left: 40px"
+                  >
                   Volunteer <span class="sr-only">(current)</span>
               </a>
               </li>
-              <!-- <li class="nav-item">
-                <a class="nav-link" href="#blogs" style="padding-left: 40px">
-                  Blog <span class="sr-only">(current)</span>
-                </a>
-              </li> -->
-                  <!-- <li class="nav-item">
-                    <a class="nav-link" href="#contact" style="padding-left: 40px"
-                      >Contact <span class="sr-only">(current)</span>
-                  </a>
-                  </li> -->
             </ul>
           </div>
         </div>

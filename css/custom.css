@@ -1,7 +1,7 @@
 
 #me {
   width: 180px;
-  border-radius: 0%; 
+  border-radius: 4%; 
    /* For making circular(100) */
 }
 
@@ -60,7 +60,12 @@ h1{
   font-size: 18px;
 }
 
-#nav-list li a.active {
+/* #nav-list li a.active-page {
+  color: #251d74;
+} */
+
+#nav-list ul li a.active-page
+{
   color: #251d74;
 }
 
@@ -357,11 +362,91 @@ img{
   color: white;
 }
 
-
-
-
 /* Image and Text */
 
+
+/* volunteer page starts */
+
+/* For displaying image */
+.volunteer{
+  margin-left: 100px;
+  margin-right: 150px; 
+}
+.volunteer-name{
+  display: flex;
+  justify-content: start;
+  align-items: start;
+  min-width: 150vh;
+  margin: 10px auto;
+  width: 80%;
+  /* text-align: left; */
+  font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+
+}
+
+.volunteer-date{
+  margin-left: 15px;
+}
+
+.volunteer img{
+  float: left;  
+  margin-left: 15px;
+  height: auto;
+  width:100%;
+  /* width: auto; */
+  /* aspect-ratio: attr(width) / attr(height); */
+  /* max-width: 100%;  */
+  /* space between image and text */
+}
+
+
+.voluntImg-name {
+  float: right;  
+  margin-right: 1px;
+  /* position: relative; */
+  top: 0;
+  /* left: 60%; */
+  /* width: 400px;
+  height: 300px; */
+  /* background-color: rgba(0,0,0,0.5);
+  color: white; */
+  /* text-align: center; */
+  padding: 10px;
+}
+
+
+
+/* .volunteer image-text{
+  font-size: 20px;
+  padding-top: 3%;
+  float: left;
+  padding-left: 0px;
+} */
+
+
+/* .volunteer-text{
+  text-align: left;
+  font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+  margin-left: 50px;
+  margin-right: 150px;
+} */
+.volunteer h2{
+  text-align: left;
+  font-size: 30px;
+}   
+
+.volunteer h1{
+  text-align: left;
+  font-size: 30px;
+}
+
+.volunteer-text{
+  font-size: 20px;
+  padding-top: 0%;
+  float: right;
+  padding-left: 0px;
+}
+/* volunteer page ends */
 
 /* For Home Page decoration */
 
