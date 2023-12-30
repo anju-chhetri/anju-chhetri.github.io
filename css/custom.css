@@ -40,18 +40,20 @@ h1{
 
 
 nav {
-
+  
   display: flex;
   justify-content: space-around;
   align-items: center;
   min-height: 8vh;
   background-color: rgb(255, 255, 255);
   font-family: "Montserrat", sans-serif;
+  
 }
 
 
 
 .nav-links {
+  position: relative;
   display: flex;
   /* Responsible for bottom up kind of setup in navbar */
   justify-content: space-around;
@@ -139,7 +141,7 @@ img{
   margin-right: 1px;
   position: relative;
   top: 0;
-  left: 60px;
+  left: 90px;
   height: auto;
   /* width:100%; */
   /* width: 500px;
@@ -251,6 +253,7 @@ img{
   margin-left: 200px;
   margin-right: 150px;
   font-size: 20px;
+  font-size: 22px;
 }
 
 .table.award-table {
