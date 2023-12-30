@@ -4,7 +4,9 @@
   border-radius: 4%; 
    /* For making circular(100) */
 }
-
+html  {
+  overflow-x: hidden;
+  }
 
 
 body{
