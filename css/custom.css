@@ -108,9 +108,9 @@ nav {
   box-sizing: border-box;
 } */
 
-.flex-item {
+/* .flex-item {
   margin: 0 20px;
-}
+} */
 
 /* For displaying image */
 
@@ -121,7 +121,14 @@ img{
 }
 .image-container {
   display: flex;
-  /* align-items: center; */
+  text-align: start;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: start;
+  align-content: stretch;
+  box-sizing: border-box;  
+  
 }
 
 .image-name {
@@ -129,23 +136,28 @@ img{
   margin-right: 1px;
   position: relative;
   top: 0;
-  left: 500px;
-  width: 500px;
-  height: 200px;
+  left: 60px;
+  height: auto;
+  width:100%;
+  /* width: 500px;
+  height: auto; */
+  /* height: 500px; */
   background-color: rgba(0,0,0,0.5);
   color: white;
   /* text-align: center; */
-  padding: 10px;
+  /* padding: 10px; */
 }
-
-
 
 .image-text{
+  /* text-align: left; */
   font-size: 26px;
   padding-top: 0%;
-  float: left;
-  padding-left: 0px;
-}
+  /* float: left; */
+  margin-left: 200px;
+  }
+
+
+
 
 /* image display ends */
 
