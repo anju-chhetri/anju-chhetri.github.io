@@ -1,15 +1,13 @@
-
 #me {
   width: 180px;
-  border-radius: 4%; 
-   /* For making circular(100) */
+  border-radius: 4%;
+  /* For making circular(100) */
 }
-html  {
+html {
   overflow-x: hidden;
-  }
+}
 
-
-body{
+body {
   margin: 0px;
   margin-left: 150px;
   margin-right: 30px;
@@ -22,7 +20,7 @@ body{
   margin-top: 0;
 } */
 
-h1{
+h1 {
   text-align: center;
 }
 
@@ -37,20 +35,15 @@ h1{
 
 /* For navigation bar */
 
-
-
 nav {
-  
   display: flex;
-  justify-content: space-around;
+  justify-content: right;
   align-items: center;
   min-height: 8vh;
   background-color: rgb(255, 255, 255);
   font-family: "Montserrat", sans-serif;
-  
+  /* border: 2px solid blue; */
 }
-
-
 
 .nav-links {
   position: relative;
@@ -59,12 +52,11 @@ nav {
   justify-content: space-around;
   width: 10%;
   /* Distance between topics on navbar */
-
 }
 
 .nav-links li {
   list-style: none;
-/* Removes bulletin from topics */
+  /* Removes bulletin from topics */
 }
 
 .nav-links a {
@@ -73,7 +65,7 @@ nav {
   /* letter-spacing: 3px; */
   font-weight: bold;
   font-size: 25px;
-  padding: 700px 300px 16px;
+  /* padding: 700px 300px 16px; */
 }
 
 /* .nav-links a:hover:not(.active) {
@@ -81,15 +73,20 @@ nav {
 } */
 
 .nav-links li a.active {
-  color:  #417e4c;
+  color: #417e4c;
 }
 
 #nav-list a:hover {
   color: #867d8b;
 }
 
+.nav-item {
+  /* border: 2px solid red; */
+  padding-right: 60px;
+  padding-left: 20px;
+  /* margin-right: 10px; */
+}
 /* Navigation Bar Ends */
-
 
 /* .flex-row {
   display: flex;
@@ -118,8 +115,8 @@ nav {
 
 /* For displaying image */
 
-img{
-  float: left;  
+img {
+  float: left;
   margin-right: 20px;
   /* space between image and text */
 }
@@ -133,11 +130,10 @@ img{
   justify-content: flex-start;
   align-content: stretch;
   box-sizing: border-box;   */
-  
 }
 
 .image-name {
-  float: right;  
+  float: right;
   margin-right: 1px;
   position: relative;
   top: 0;
@@ -147,109 +143,97 @@ img{
   /* width: 500px;
   height: auto; */
   /* height: 500px; */
-  background-color: rgba(0,0,0,0.5);
+  background-color: rgba(0, 0, 0, 0.5);
   color: white;
   /* text-align: center; */
   /* padding: 10px; */
 }
 
-.image-text{
+.image-text {
   /* text-align: left; */
   font-size: 26px;
   padding-top: 0%;
   /* float: left; */
   margin-left: 200px;
-
-  }
-
-
-
+}
 
 /* image display ends */
 
 /* About section starts */
 
-.aboutme{
+.aboutme {
   text-align: left;
-  font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+  font-family: "Open Sans", Helvetica, Arial, sans-serif;
   margin-left: 200px;
   margin-right: 150px;
   font-size: 23px;
 }
 
-.aboutme h2{
+.aboutme h2 {
   text-align: left;
   font-size: 35px;
   line-height: 0.7;
 }
 /* About section ends */
 
-
 /* Experience section begins */
-.experience{
+.experience {
   text-align: left;
-  font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+  font-family: "Open Sans", Helvetica, Arial, sans-serif;
   margin-left: 200px;
   margin-right: 150px;
   font-size: 23px;
-
 }
 
-.experience-name{
+.experience-name {
   font-size: 25px;
   line-height: 0.2;
 }
-.experience-date{
+.experience-date {
   font-size: 22px;
 }
-.experience ul{
-
+.experience ul {
   font-size: 22px;
 }
-
 
 /* Experience section ends */
 
-
 /* Project section begins */
-.project{
+.project {
   text-align: left;
-  font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+  font-family: "Open Sans", Helvetica, Arial, sans-serif;
   margin-left: 200px;
   margin-right: 150px;
   font-size: 23px;
 }
 
-.project h2{
+.project h2 {
   text-align: left;
   font-size: 35px;
+}
 
-}  
-
-.project-name{
+.project-name {
   font-size: 25px;
 }
 
-.project h3{
+.project h3 {
   text-align: left;
-  font-size: 22px;
-  
-}   
-
-
-.project-date{
   font-size: 22px;
 }
 
-.project ul{
+.project-date {
+  font-size: 22px;
+}
+
+.project ul {
   font-size: 22px;
 }
 /* Project section ends */
 
 /* Awards section begins */
-.award{
+.award {
   text-align: left;
-  font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+  font-family: "Open Sans", Helvetica, Arial, sans-serif;
   margin-left: 200px;
   margin-right: 150px;
   font-size: 20px;
@@ -260,43 +244,39 @@ img{
   margin-top: 50px;
   margin-bottom: 100px;
   margin-left: 20px;
-  margin-right: 15px;  
+  margin-right: 15px;
   border-collapse: collapse;
-
 }
-.table.award-table th, td{
+.table.award-table th,
+td {
   border: 1px solid black;
 }
 /* Awards section ends */
 
-
-
-
 /* Community Involvement Section begins */
-.community{
+.community {
   text-align: left;
-  font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+  font-family: "Open Sans", Helvetica, Arial, sans-serif;
   margin-left: 200px;
   margin-right: 150px;
   font-size: 35px;
 }
 
-.community-name{
+.community-name {
   font-size: 25px;
   line-height: 0.2;
-
 }
 
-.community h2{
+.community h2 {
   text-align: left;
   font-size: 35px;
-}   
+}
 
-.community-date{
+.community-date {
   font-size: 22px;
 }
 
-.community ul{
+.community ul {
   font-size: 22px;
 }
 /* Community Involvement Section ends  */
@@ -305,8 +285,7 @@ img{
 .social {
   margin-top: 40px;
   margin-bottom: 20px;
-  text-align: center  ;
-
+  text-align: center;
 }
 
 .social a {
@@ -315,7 +294,7 @@ img{
   border-radius: 10%;
   font-size: 25px;
   margin: 5px;
-  text-align:center; 
+  text-align: center;
   cursor: pointer;
   transition: transform 0.2s ease;
 }
@@ -327,14 +306,13 @@ img{
   text-decoration: none;
   border-radius: 50%;
   height: 0.1px;
-  
 }
 
 .fa-github:hover {
   color: #461165;
   text-decoration: none;
   transform: scale(1.2);
-} 
+}
 
 .fa-linkedin:hover {
   color: #0077b5;
@@ -345,8 +323,7 @@ img{
 /* For CV button */
 .buttonDiv {
   margin: 10px 9px 10px 5px;
-  text-align:center; 
-
+  text-align: center;
 }
 
 .resumeButton {
@@ -356,8 +333,6 @@ img{
   background-color: #6c757d;
   border-radius: 5px;
   color: white;
-  
-
 }
 
 .resumeButton:hover {
@@ -368,16 +343,15 @@ img{
 
 /* Image and Text */
 
-
 /* volunteer page starts */
 
 /* For displaying image */
-.volunteer{
+.volunteer {
   margin-left: 100px;
-  margin-right: 150px; 
+  margin-right: 150px;
 }
 
-.volunteer-name{
+.volunteer-name {
   display: flex;
   justify-content: start;
   align-items: start;
@@ -385,28 +359,26 @@ img{
   margin: 10px auto;
   width: 80%;
   /* text-align: left; */
-  font-family: 'Open Sans', Helvetica, Arial, sans-serif;
-
+  font-family: "Open Sans", Helvetica, Arial, sans-serif;
 }
 
-.volunteer-date{
+.volunteer-date {
   margin-left: 15px;
 }
 
-.volunteer img{
-  float: left;  
+.volunteer img {
+  float: left;
   margin-left: 15px;
   height: auto;
-  width:100%;
+  width: 100%;
   /* width: auto; */
   /* aspect-ratio: attr(width) / attr(height); */
   /* max-width: 100%;  */
   /* space between image and text */
 }
 
-
 .voluntImg-name {
-  float: right;  
+  float: right;
   margin-right: 1px;
   /* position: relative; */
   top: 0;
@@ -419,8 +391,6 @@ img{
   padding: 10px;
 }
 
-
-
 /* .volunteer image-text{
   font-size: 20px;
   padding-top: 3%;
@@ -428,24 +398,23 @@ img{
   padding-left: 0px;
 } */
 
-
 /* .volunteer-text{
   text-align: left;
   font-family: 'Open Sans', Helvetica, Arial, sans-serif;
   margin-left: 50px;
   margin-right: 150px;
 } */
-.volunteer h2{
-  text-align: left;
-  font-size: 30px;
-}   
-
-.volunteer h1{
+.volunteer h2 {
   text-align: left;
   font-size: 30px;
 }
 
-.volunteer-text{
+.volunteer h1 {
+  text-align: left;
+  font-size: 30px;
+}
+
+.volunteer-text {
   font-size: 20px;
   padding-top: 0%;
   float: right;
@@ -454,9 +423,5 @@ img{
 /* volunteer page ends */
 
 /* For Home Page decoration */
-
-
-
-
 
 /* Look for spacing between sections */
