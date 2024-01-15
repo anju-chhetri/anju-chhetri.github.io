@@ -11,9 +11,13 @@ body {
   margin: 0px;
   margin-left: 150px;
   margin-right: 150px;
+  font-family:"Lora",  "Open Sans", Helvetica, Arial, sans-serif;
   /* margin-top: 250px; */
 }
 
+a{
+  text-decoration: none;
+}
 /* main{
   margin-left: 25px;
   margin-right: 40px;
@@ -151,7 +155,7 @@ img {
 
 .image-text {
   /* text-align: left; */
-  font-size: 26px;
+  font-size: 23px;
   padding-top: 0%;
   /* float: left; */
   margin-left: 200px;
@@ -163,7 +167,7 @@ img {
 
 .aboutme {
   text-align: left;
-  font-family: "Open Sans", Helvetica, Arial, sans-serif;
+  /* font-family: "Open Sans", Helvetica, Arial, sans-serif; */
   margin-left: 200px;
   margin-right: 150px;
   font-size: 23px;
@@ -179,7 +183,7 @@ img {
 /* Experience section begins */
 .experience {
   text-align: left;
-  font-family: "Open Sans", Helvetica, Arial, sans-serif;
+  /* font-family: "Open Sans", Helvetica, Arial, sans-serif; */
   margin-left: 200px;
   margin-right: 150px;
   font-size: 23px;
@@ -201,7 +205,7 @@ img {
 /* Project section begins */
 .project {
   text-align: left;
-  font-family: "Open Sans", Helvetica, Arial, sans-serif;
+  /* font-family: "Open Sans", Helvetica, Arial, sans-serif; */
   margin-left: 200px;
   margin-right: 150px;
   font-size: 23px;
@@ -233,7 +237,7 @@ img {
 /* Awards section begins */
 .award {
   text-align: left;
-  font-family: "Open Sans", Helvetica, Arial, sans-serif;
+  /* font-family: "Open Sans", Helvetica, Arial, sans-serif; */
   margin-left: 200px;
   margin-right: 150px;
   font-size: 20px;
@@ -256,7 +260,7 @@ td {
 /* Community Involvement Section begins */
 .community {
   text-align: left;
-  font-family: "Open Sans", Helvetica, Arial, sans-serif;
+  /* font-family: "Open Sans", Helvetica, Arial, sans-serif; */
   margin-left: 200px;
   margin-right: 150px;
   font-size: 35px;
@@ -359,7 +363,7 @@ td {
   margin: 10px auto;
   width: 80%;
   /* text-align: left; */
-  font-family: "Open Sans", Helvetica, Arial, sans-serif;
+  /* font-family: "Open Sans", Helvetica, Arial, sans-serif; */
 }
 
 .volunteer-date {

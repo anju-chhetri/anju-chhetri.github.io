@@ -1,0 +1,93 @@
+#me {
+    width: 180px;
+    border-radius: 4%;
+    /* For making circular(100) */
+  }
+  html {
+    overflow-x: hidden;
+  }
+  
+  body {
+    margin: 0px;
+    margin-left: 150px;
+    margin-right: 150px;
+    /* margin-top: 250px; */
+  }
+  
+  /* main{
+    margin-left: 25px;
+    margin-right: 40px;
+    margin-top: 0;
+  } */
+  
+  h1 {
+    text-align: center;
+  }
+  
+  /* Header info */
+  
+  .hero {
+    background-color: white;
+    height: 15vh;
+    position: relative;
+    color: #461165;
+  }
+  
+  /* For navigation bar */
+  
+  nav {
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    min-height: 8vh;
+    background-color: rgb(255, 255, 255);
+    font-family: "Montserrat", sans-serif;
+    /* border: 2px solid blue; */
+  }
+  
+  .nav-links {
+    position: relative;
+    display: flex;
+    /* Responsible for bottom up kind of setup in navbar */
+    justify-content: space-around;
+    width: 10%;
+    /* Distance between topics on navbar */
+  }
+  
+  .nav-links li {
+    list-style: none;
+    /* Removes bulletin from topics */
+  }
+  
+  .nav-links a {
+    color: rgb(18, 17, 17);
+    text-decoration: none;
+    /* letter-spacing: 3px; */
+    font-weight: bold;
+    font-size: 25px;
+    /* padding: 700px 300px 16px; */
+  }
+  
+  /* .nav-links a:hover:not(.active) {
+    background-color: white;
+  } */
+  
+  .nav-links li a.active {
+    color: #417e4c;
+  }
+  
+  #nav-list a:hover {
+    color: #867d8b;
+  }
+  
+  .nav-item {
+    /* border: 2px solid red; */
+    padding-right: 60px;
+    padding-left: 20px;
+    /* margin-right: 10px; */
+  }
+  /* Navigation Bar Ends */
+  
+
+  
+  /* Look for spacing between sections */
