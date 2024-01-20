@@ -1,0 +1,205 @@
+
+#me {
+    width: 180px;
+    border-radius: 4%;
+    /* For making circular(100) */
+  }
+  html {
+    overflow-x: hidden;
+  }
+  
+  body {
+    margin: 0px;
+    margin-left: 100px;
+    margin-right: 250px;
+    font-family:"Times New Roman", Times, serif;
+    /* margin-top: 250px; */
+  }
+  
+  a{
+    text-decoration: none;
+  }
+  /* main{
+    margin-left: 25px;
+    margin-right: 40px;
+    margin-top: 0;
+  } */
+  
+  h1 {
+    text-align: center;
+  }
+  
+  /* Header info */
+  
+  .hero {
+    background-color: white;
+    height: 15vh;
+    position: relative;
+    color: #461165;
+  }
+  
+  /* For navigation bar */
+  
+  nav {
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    min-height: 8vh;
+    background-color: rgb(255, 255, 255);
+    font-family: "Montserrat", sans-serif;
+    /* border: 2px solid blue; */
+  }
+  
+  .nav-links {
+    position: relative;
+    display: flex;
+    /* Responsible for bottom up kind of setup in navbar */
+    justify-content: space-around;
+    width: 10%;
+    /* Distance between topics on navbar */
+  }
+  
+  .nav-links li {
+    list-style: none;
+    /* Removes bulletin from topics */
+  }
+  
+  .nav-links a {
+    color: rgb(18, 17, 17);
+    text-decoration: none;
+    /* letter-spacing: 3px; */
+    font-weight: bold;
+    font-size: 25px;
+    /* padding: 700px 300px 16px; */
+  }
+  
+  /* .nav-links a:hover:not(.active) {
+    background-color: white;
+  } */
+  
+  .nav-links li a.active {
+    color: #417e4c;
+  }
+  
+  #nav-list a:hover {
+    color: #867d8b;
+  }
+  
+  .nav-item {
+    /* border: 2px solid red; */
+    padding-right: 60px;
+    padding-left: 20px;
+    /* margin-right: 10px; */
+  }
+  /* Navigation Bar Ends */
+  
+/* volunteer page starts */
+
+/* For displaying image */
+/* .volunteer {
+  margin-left: 5px;
+  margin-right: 2px;
+} */
+
+.volunteer-discription {
+    display: flex;
+    justify-content: start;
+    align-items: start;
+    min-width: 150vh;
+    margin: 10px auto;
+    width: 80%;
+    /* text-align: left; */
+    /* font-family: "Open Sans", Helvetica, Arial, sans-serif; */
+  }
+  
+  .volunteer-date {
+    margin-left: 15px;
+  }
+  
+  .volunteer img {
+    float: left;
+    margin-left: 15px;
+    height: auto;
+    width: 100%;
+    /* width: auto; */
+    /* aspect-ratio: attr(width) / attr(height); */
+    /* max-width: 100%;  */
+    /* space between image and text */
+  }
+  
+  .voluntImg-name {
+    float: right;
+    margin-right: 1px;
+    /* position: relative; */
+    top: 0;
+    /* left: 60%; */
+    /* width: 400px;
+    height: 300px; */
+    /* background-color: rgba(0,0,0,0.5);
+    color: white; */
+    /* text-align: center; */
+    padding: 10px;
+  }
+  
+  /* .volunteer image-text{
+    font-size: 20px;
+    padding-top: 3%;
+    float: left;
+    padding-left: 0px;
+  } */
+  
+  /* .volunteer-text{
+    text-align: left;
+    font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+    margin-left: 50px;
+    margin-right: 150px;
+  } */
+  
+  
+  .volunteer h1 {
+    text-align: left;
+    font-size: 30px;
+  }
+  
+  .volunteer-text {
+    font-size: 24px;
+    padding-top: 0%;
+    float: right;
+    padding-left: 0px;
+  }
+  /* volunteer page ends */
+  
+  @media only screen and (min-width: 0px) and (max-width: 1450px) {
+    body {
+      margin: 0px;
+      margin-left: 10px;
+      margin-right: 10px;
+    }
+
+    nav {
+        justify-content: right;
+      }
+      .nav-item {
+        padding-right: 10px;
+        padding-left: 20px;
+          }
+
+    .volunteer{
+      margin-left: 5px;
+      margin-right: 3px;
+    }
+  
+    .volunteer-name{
+      display: grid;
+    }
+
+    .volunteer-discription {
+      display: contents;
+    }
+  
+  }
+  
+  
+  
+  
+  /* Responsive website implementation ends */
