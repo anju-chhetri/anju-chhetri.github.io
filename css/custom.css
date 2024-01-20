@@ -155,7 +155,7 @@ img {
 
 .image-text {
   /* text-align: left; */
-  font-size: 26px;
+  font-size: 25px;
   padding-top: 0%;
   /* float: left; */
   margin-left: 200px;
@@ -170,7 +170,7 @@ img {
   /* font-family: "Open Sans", Helvetica, Arial, sans-serif; */
   margin-left: 200px;
   margin-right: 150px;
-  font-size: 26px;
+  font-size: 25px;
 }
 
 .aboutme h2 {
@@ -197,7 +197,7 @@ img {
   font-size: 22px;
 }
 .experience ul {
-  font-size: 23px;
+  font-size: 25px;
 }
 
 /* Experience section ends */
@@ -208,7 +208,7 @@ img {
   /* font-family: "Open Sans", Helvetica, Arial, sans-serif; */
   margin-left: 200px;
   margin-right: 150px;
-  font-size: 25px;
+  font-size: 26px;
 }
 
 .project h2 {
@@ -230,7 +230,7 @@ img {
 }
 
 .project ul {
-  font-size: 23px;
+  font-size: 25px;
 }
 /* Project section ends */
 
@@ -241,7 +241,7 @@ img {
   margin-left: 200px;
   margin-right: 150px;
   /* font-size: 20px; */
-  font-size: 24px;
+  font-size: 25px;
 }
 
 .table.award-table {
@@ -267,7 +267,7 @@ td {
 }
 
 .community-name {
-  font-size: 25px;
+  font-size: 26px;
   line-height: 0.2;
 }
 
@@ -281,7 +281,7 @@ td {
 }
 
 .community ul {
-  font-size: 23px;
+  font-size: 25px;
 }
 /* Community Involvement Section ends  */
 
@@ -419,7 +419,7 @@ td {
 }
 
 .volunteer-text {
-  font-size: 20px;
+  font-size: 24px;
   padding-top: 0%;
   float: right;
   padding-left: 0px;
