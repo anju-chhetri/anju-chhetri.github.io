@@ -9,9 +9,9 @@ html {
 
 body {
   margin: 0px;
-  margin-left: 150px;
-  margin-right: 150px;
-  font-family:"Lora",  "Open Sans", Helvetica, Arial, sans-serif;
+  margin-left: 250px;
+  margin-right: 250px;
+  font-family:"Times New Roman", Times, serif;
   /* margin-top: 250px; */
 }
 
@@ -155,7 +155,7 @@ img {
 
 .image-text {
   /* text-align: left; */
-  font-size: 23px;
+  font-size: 26px;
   padding-top: 0%;
   /* float: left; */
   margin-left: 200px;
@@ -170,7 +170,7 @@ img {
   /* font-family: "Open Sans", Helvetica, Arial, sans-serif; */
   margin-left: 200px;
   margin-right: 150px;
-  font-size: 23px;
+  font-size: 26px;
 }
 
 .aboutme h2 {
@@ -186,18 +186,18 @@ img {
   /* font-family: "Open Sans", Helvetica, Arial, sans-serif; */
   margin-left: 200px;
   margin-right: 150px;
-  font-size: 23px;
+  font-size: 26px;
 }
 
 .experience-name {
-  font-size: 25px;
+  font-size: 26px;
   line-height: 0.2;
 }
 .experience-date {
   font-size: 22px;
 }
 .experience ul {
-  font-size: 22px;
+  font-size: 23px;
 }
 
 /* Experience section ends */
@@ -208,7 +208,7 @@ img {
   /* font-family: "Open Sans", Helvetica, Arial, sans-serif; */
   margin-left: 200px;
   margin-right: 150px;
-  font-size: 23px;
+  font-size: 25px;
 }
 
 .project h2 {
@@ -217,12 +217,12 @@ img {
 }
 
 .project-name {
-  font-size: 25px;
+  font-size: 26px;
 }
 
 .project h3 {
   text-align: left;
-  font-size: 22px;
+  font-size: 23px;
 }
 
 .project-date {
@@ -230,7 +230,7 @@ img {
 }
 
 .project ul {
-  font-size: 22px;
+  font-size: 23px;
 }
 /* Project section ends */
 
@@ -240,8 +240,8 @@ img {
   /* font-family: "Open Sans", Helvetica, Arial, sans-serif; */
   margin-left: 200px;
   margin-right: 150px;
-  font-size: 20px;
-  font-size: 22px;
+  /* font-size: 20px; */
+  font-size: 24px;
 }
 
 .table.award-table {
@@ -281,7 +281,7 @@ td {
 }
 
 .community ul {
-  font-size: 22px;
+  font-size: 23px;
 }
 /* Community Involvement Section ends  */
 
