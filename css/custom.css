@@ -3,6 +3,10 @@
   border-radius: 4%;
   /* For making circular(100) */
 }
+#square{
+  transition: ease all 1s;
+}
+
 html {
   overflow-x: hidden;
 }
@@ -358,11 +362,12 @@ td {
   }
 
 } */
-@media only screen and (min-width: 0px) and (max-width: 1350px) {
+@media only screen and (min-width: 900px) and (max-width: 1400px) {
   body {
     margin: 0px;
     margin-left: 10px;
     margin-right: 10px;
+
   }
 }
 

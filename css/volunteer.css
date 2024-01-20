@@ -16,6 +16,9 @@
     /* margin-top: 250px; */
   }
   
+  #square{
+    transition: ease all 1s;
+  }
   a{
     text-decoration: none;
   }
