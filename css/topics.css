@@ -9,7 +9,7 @@
   
   body {
     margin: 0px;
-    margin-left: 150px;
+    margin-left: 20px;
     margin-right: 150px;
     /* margin-top: 250px; */
   }
@@ -28,14 +28,14 @@
   
   .hero {
     background-color: white;
-    height: 15vh;
+    height: 8vh;
     position: relative;
     color: #461165;
   }
   
   /* For navigation bar */
   
-  nav {
+  nav#navbarH {
     display: flex;
     justify-content: right;
     align-items: center;
@@ -65,12 +65,8 @@
     /* letter-spacing: 3px; */
     font-weight: bold;
     font-size: 25px;
-    /* padding: 700px 300px 16px; */
   }
   
-  /* .nav-links a:hover:not(.active) {
-    background-color: white;
-  } */
   
   .nav-links li a.active {
     color: #417e4c;
@@ -81,13 +77,69 @@
   }
   
   .nav-item {
-    /* border: 2px solid red; */
     padding-right: 60px;
     padding-left: 20px;
-    /* margin-right: 10px; */
   }
   /* Navigation Bar Ends */
   
 
+
+
+
+/* Vertical navBar starts */
+nav#navbarV {
+  font-family: "Montserrat", sans-serif;
+  /* display: flex; */
+  background-color: rgb(255, 255, 255);
+} 
+/* .nav-linksV{
+  list-style-type: none;
+} */
+
+.nav-itemV a{
+  text-decoration: none;
+
+
+}
+.nav-linksV a{
+  text-decoration: none;
+}
+
+.nav-linksV{
+  list-style-type: none;
+  /* margin: 0; */
+  padding: 0;
+  width: 10%;
+  background-color: #f1f1f1;
+  position: fixed;
+  /* height: 100%; */
+  /* overflow: auto; */
+}
+
+/* 
+.nav-itemV li a {
+  display: block;
+  color: #000;
+  padding: 8px 16px;
+  text-decoration: none;
+}
+
+.nav-itemV li a.active {
+  background-color: #04AA6D;
+  color: white;
+}
+
+.nav-itemV li a:hover:not(.active) {
+  background-color: #555;
+  color: white;
+} */
+
+/* Vertical navBar ends */
   
+
+.content{
+  margin-left:15%;
+  /* padding:1px 10px; */
+  /* height:500px; */
+}
   /* Look for spacing between sections */
