@@ -40,6 +40,11 @@
       rel="stylesheet"
     />
 
+    <script
+    type="text/javascript" 
+    async="" 
+    src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-MML-AM_CHTML">
+    </script>
     <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js
 "></script> -->
     <!-- <script src="js/menu.js"></script> -->
@@ -59,7 +64,7 @@
             </li>
 
             <li class="nav-item">
-              <a class="active" href="../topics.html">Notes</a>  
+              <a class="active" href="basisFunction.html">Notes</a>  
             </li>
           </ul>
         </div>
@@ -68,10 +73,11 @@
       <nav id="navbarV">
         <ul class="nav-linksV">
           <li class="nav-itemV">
-            <a href="/topics/basisFunction.html">Basis Function</a>
+            <a href="basisFunction.html">Basis Function</a>
           </li>
+
           <li class="nav-itemV">
-            <a href="..">Bias and Variance</a>
+            <a href="AdversarialMachineLearning.html">Adversarial Machine Learning</a>
           </li>
 
         </ul>
@@ -79,12 +85,54 @@
     </header>
     <!-- Navigation Bar Ends -->
         <!-- About section begins -->
-        <div class="content">
+        <div class="content" >
             <h2>Basis Function</h2>
+          A simple regression is given by the following equation:
+          <!-- Insert image here -->
+          <br>
+          <br>
+          This function is a linear with parameters w and x. This adds significant limitations 
+          to the abilities of a regression models. To overcome this limitation we can wrap the input variable x 
+          to some non-linear fuction i,e linear combination of non-linear functions of the input variable. 
+          This allows to model complex realtionships between the input and output.
+          <br>
+          <br>
+          <hr>
+          Some examples of basis functions are as follow:
+          <h2>Polynomial Basis Function</h2>
+          <p><span class="math display">$$y(x,w) = \sum_{i=1}^{M-1}
+            w_j\phi_j(x)$$</span></p>
+            <span class="math display"><em>ϕ</em><sub><em>j</em></sub>(<em>x</em>)</span> is the basis functions.
+            
+            <br><br>
+            Here, <span
+              class="math display"><em>w</em> = (<em>w</em><sub>0</sub>,<em>w</em><sub>1</sub>,⋯,<em>w</em><sub><em>M</em> − 1</sub>)<sup><em>T</em></sup></span>
+               and <span
+                class="math display"><em>ϕ</em> = (<em>ϕ</em><sub>0</sub>,<em>ϕ</em><sub>1</sub>,⋯,<em>ϕ</em><sub><em>M</em> − 1</sub>)<sup><em>T</em></sup></span>        <!-- Insert image here -->
+
+          <h2>Gaussian Basis Function</h2>
+          <span class="math display">$$\phi_j(x) =
+            exp\{\frac{-(x-\mu_j)^2}{2s^2}\}$$</span>
+            Here, <span class="math display"><em>μ</em><sub><em>j</em></sub></span> represents the location of 
+            the basis function. s is their spatial scale. 
+
+          <h2> Sigmoidal Basis Function</h2>
+          <span class="math display">$$\phi_j =
+            \sigma(\frac{x-\mu_j}{s})$$</span>
+            σ is the sigmoid function given by:
+           <span class="math display">$$\sigma(a) =
+          \frac{1}{1+exp(-a)}$$</span>
+
+
+          <br>
+          
+          <h2>References</h2>
+          - Bishop, Christopher M. Pattern Recognition and Machine Learning.
+
+          
 
           </div>
           
-          <br />
    </body>
 
 </html>

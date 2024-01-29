@@ -1,6 +1,7 @@
 #me {
     width: 180px;
     border-radius: 4%;
+    
     /* For making circular(100) */
   }
   html {
@@ -11,6 +12,7 @@
     margin: 0px;
     margin-left: 20px;
     margin-right: 150px;
+    margin-bottom: 50px;
     /* margin-top: 250px; */
   }
   
