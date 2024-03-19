@@ -55,7 +55,7 @@
     </script>
         <script>
             $(function() {
-               $("#GaussianProcesses").load("notes/AdversarialMachineLearning.html");
+               $("#GaussianProcesses").load("notes/gaussianProcess.html");
             });
          </script>
   </head>
@@ -81,9 +81,9 @@
       </nav>
 
       <div class="tab">
-        <button class="tablinks" onclick="openCity(event, 'BasisFunction')" id="defaultOpen">Basis Function</button>
-        <button class="tablinks" onclick="openCity(event, 'GaussianProcesses')">Gaussian Processes</button>
-        <button class="tablinks" onclick="openCity(event, 'BaysianOptimisation')">Baysian Optimisation</button>
+        <button class="tablinks" onclick="openNotes(event, 'BasisFunction')" >Basis Function</button>
+        <button class="tablinks" onclick="openNotes(event, 'GaussianProcesses')" id="defaultOpen">Gaussian Processes</button>
+        <button class="tablinks" onclick="openNotes(event, 'BaysianOptimisation')">Baysian Optimisation</button>
       </div>
       
       <div id="BasisFunction" class="tabcontent">
@@ -103,7 +103,7 @@
       
       <script>
 
-      function openCity(evt, cityName) {
+      function openNotes(evt, cityName) {
         var i, tabcontent, tablinks;
         tabcontent = document.getElementsByClassName("tabcontent");
         for (i = 0; i < tabcontent.length; i++) {

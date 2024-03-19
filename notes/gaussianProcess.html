@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+  <body>
+       <div class="content" >
+            <h2>Gaussian Process</h2>
+            <i>"Let the data speak, if you bring subjective modelling 
+               then it’s dangerous."</i> - Someone in YouTube
+            <br>
+            <br>
+            To find the non linear relationship between the variables 
+            we can use non-linear functions such as a polynomial or exponential 
+            function. But If we don’t have information on the nature of data then 
+            finding the appropriate function can be challenging. For this we can use 
+            non-parametric methods like the Gaussian process(GP).
+            <br>
+            <br>
+            <i>“The idea of Gaussian process modelling is, without parameterizing y(x)(Prediction function), to place a 
+            prior P(y(x)) directly on the space of functions.”</i> - David J.C. Mackay
+            <br>
+            <br>
+            GP is a method of supervised machine learning which is used for regression 
+            and probabilistic classification. It provides the <b>distribution over 
+            the samples of prediction functions</b>. It also gives uncertainties present in the prediction.
+            <br>   
+            <br>
+            To call it nonparametric would be a misnomer. Nonparametric does not imply the absence of parameters but 
+            rather predictions are obtained without giving the unknown function y(x) an explicit parameterization. The parameters 
+            present usually increase infinitetly as the model sees 
+            more data.
+          
+            <br>
+            <br>
+            We can view it as a generalisation of the multivariate gaussian distribution over the infinite dimension. 
+            Infinite dimension here means that we have a prediction function that can map infinitely many input values 
+            to outputs. As gaussian distribution is characterised by mean and covariance matrix, 
+            GP is also characterised by mean function and a covariance function which is given by a kernel. Which is given by,
+            <br>
+            <i>Put Equation here</i>
+
+            <br>
+            <br>
+            We keep the mean function zero as the mean does not carry any important information and it’s 
+            the covariance function that captures the information required for modelling the GP. Consequently, 
+            the covariance matrix determines which type of functions from the space of all possible functions are more probable.
+            <br>
+            <br>
+            <hr>
+            <h3>Kernel Function</h3>
+            <div class = "subdivison">
+               Kernel is responsible for giving similarity between two variables. We can have functions like RBF, Periodic, linear or 
+               combination of kernels. Prediction functions that are likely to be sampled are controlled by the kernel.
+               <br>
+               <i>Put Equation Here</i>
+            </div>
+            <br>
+            <hr>
+            An important property of gaussian distribution that makes GP possible is that the gaussian distribution is closed 
+            under marginalisation and conditioning. Which means that the resulting distribution from these operations are also gaussian and 
+            this is an important property as this ensures that the obtained results are mathematically tractable.
+
+            <h3>Marginalisation</h3>
+            <div class="subdivison">
+
+            </div>
+            <h3>Conditioning</h3>
+            <div class="subdivison">
+               
+            </div>
+
+        </div>
+  </body></html>
