@@ -139,3 +139,10 @@
     /* border-left: none; */
     /* height: 300px; */
   }
+
+  .notes-jpeg-name {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+  }
