@@ -51,7 +51,6 @@
        $(function() {
           $("#BasisFunction").load("notes/basisFunction.html");
        });
- 
     </script>
     
     <script>
@@ -63,6 +62,11 @@
     <script>
       $(function() {
           $("#JPEGAlgorithm").load("notes/jpegAlgorithm.html");
+      });
+    </script>
+    <script>
+      $(function() {
+          $("#KLDivergence").load("notes/KLDivergence.html");
       });
     </script>
   </head>
@@ -94,7 +98,9 @@
         <button class="tablinks" onclick="openNotes(event, 'BasisFunction')" >Basis Function</button>
         <button class="tablinks" onclick="openNotes(event, 'GaussianProcesses')" >Gaussian Processes</button>
         <!-- <button class="tablinks" onclick="openNotes(event, 'BaysianOptimisation')">Baysian Optimisation</button> -->
-        <button class="tablinks" onclick="openNotes(event, 'JPEGAlgorithm')" id="defaultOpen"> Differentiable JPEG Algorithm </button>
+        <button class="tablinks" onclick="openNotes(event, 'JPEGAlgorithm')"> Differentiable JPEG Algorithm </button>
+        <button class="tablinks" onclick="openNotes(event, 'KLDivergence')" id="defaultOpen"> KL Divergence </button>
+
       </div>
       
       <div id="BasisFunction" class="tabcontent">
@@ -110,10 +116,18 @@
       
       <div id="BaysianOptimisation" class="tabcontent">
         <h3>Baysian Optimisation</h3>
+      
       </div>
 
       <div id="JPEGAlgorithm" class="tabcontent">
         <h3>JPEG Algorithm</h3>
+        <div id = "JPEGAlgorithm"></div>
+
+      </div>
+      <div id="KLDivergence" class="tabcontent">
+        <h3>KL Divergence</h3>
+        <div id = "KLDivergence"></div>
+
       </div>
       
       <script>
