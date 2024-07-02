@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Anju Chhetri</title>
+    <meta
+      charset="utf-8"
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+
+    <link
+      href="../css/topics.css"
+      media="screen"
+      rel="stylesheet"
+      type="text/css"
+    />
+
+    <!-- Icon Library -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css
+"
+    />
+
+    <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans:400,700
+"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700
+"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700
+"
+      rel="stylesheet"
+    />
+
+    <script
+    type="text/javascript" 
+    async="" 
+    src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-MML-AM_CHTML">
+    </script>
+    
+    <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script>
+       $(function() {
+          $("#BasisFunction").load("notes/basisFunction.html");
+       });
+    </script>
+    
+    <script>
+        $(function() {
+            $("#GaussianProcesses").load("notes/gaussianProcess.html");
+        });
+      </script>
+
+    <script>
+      $(function() {
+          $("#JPEGAlgorithm").load("notes/jpegAlgorithm.html");
+      });
+    </script>
+    <script>
+      $(function() {
+          $("#KLDivergence").load("notes/KLDivergence.html");
+      });
+    </script>
+      <script>
+          $(function() {
+              $("#initializer").load("notes/initializer.html");
+          });
+      </script>
+  </head>
+
+
+
+  <body>
+    <header class="hero">
+      <nav id = "navbarH">
+        <div class="block-display">
+          <ul class="nav-links" id="nav-list">
+            <li class="nav-item">
+              <!-- <a href="/index.html" class='active-page'> Home </a> -->
+              <a  href="index.html">Home</a>
+            </li>
+
+            <li class="nav-item">
+              <a href="volunteer.html">Personal</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="active" href="notes.html">Technical</a>  
+            </li>
+          </ul>
+        </div>
+      </nav>
+
+      <div class="tab">
+        <button class="tablinks" onclick="openNotes(event, 'BasisFunction')" >Basis Function</button>
+        <button class="tablinks" onclick="openNotes(event, 'GaussianProcesses')" >Gaussian Processes</button>
+        <!-- <button class="tablinks" onclick="openNotes(event, 'BaysianOptimisation')">Baysian Optimisation</button> -->
+        <button class="tablinks" onclick="openNotes(event, 'JPEGAlgorithm')"> Differentiable JPEG Algorithm </button>
+        <button class="tablinks" onclick="openNotes(event, 'KLDivergence')"> KL Divergence </button>
+        <button class="tablinks" onclick="openNotes(event, 'initializer')" id="defaultOpen">So why do we need to initialize weights in deep learning?</button>
+      </div>
+      
+      <div id="BasisFunction" class="tabcontent">
+        <h3>Basis Function</h3>
+           <div id = "BasisFunction"></div>
+    </div>
+      
+      <div id="GaussianProcesses" class="tabcontent">
+        <h3>Gaussian Processes</h3>
+        <div id = "GaussianProcesses"></div>
+
+      </div>
+      
+      <div id="BaysianOptimisation" class="tabcontent">
+        <h3>Baysian Optimisation</h3>
+      
+      </div>
+
+      <div id="JPEGAlgorithm" class="tabcontent">
+        <h3>JPEG Algorithm</h3>
+        <div id = "JPEGAlgorithm"></div>
+
+      </div>
+      <div id="KLDivergence" class="tabcontent">
+        <h3>KL Divergence</h3>
+        <div id = "KLDivergence"></div>
+
+      </div>
+
+      <div id="initializer" class="tabcontent">
+        <h2>So why do we initializer?</h2>
+        <div id = "initializer"></div>
+
+      </div>     
+      <script>
+
+      function openNotes(evt, cityName) {
+        var i, tabcontent, tablinks;
+        tabcontent = document.getElementsByClassName("tabcontent");
+        for (i = 0; i < tabcontent.length; i++) {
+          tabcontent[i].style.display = "none";
+        }
+        tablinks = document.getElementsByClassName("tablinks");
+        for (i = 0; i < tablinks.length; i++) {
+          tablinks[i].className = tablinks[i].className.replace(" active", "");
+        }
+        document.getElementById(cityName).style.display = "block";
+        evt.currentTarget.className += " active";
+      }
+      
+      // Get the element with id="defaultOpen" and click on it
+      document.getElementById("defaultOpen").click();
+      </script>
+    </header>
+
+
+  </body>
+</html>
