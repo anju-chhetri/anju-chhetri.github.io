@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+  
+  <body>
+            <h2>Differentiable JPEG Algorithm</h2>
+        
+            <img class="notes-jpeg-name" id="me" src="/notes/images/JPEG/diff-jpeg.png" style="width:700px;height:auto;">
+
+            <h3> Color Space Conversion</h3> 
+            Most images are stored in the RGB (Red, Green, and Blue) color space. For JPEG we
+need to convert it into YCbCr format. In this format, luminance information is stored
+as a single component (Y) and chrominance information is stored as two color-difference
+components (Cb and Cr). For conversion we use the following formula:
+<img class="notes-jpeg-name" id="me" src="/notes/images/JPEG/RGBtoYCbCr.png" style="width:400px;height:auto;">
+
+
+        <h3> Chroma Subsampling </h3>
+        <img class="notes-jpeg-name" id="me" src="/notes/images/JPEG/ycbcr.png" style="width:700px;height:auto;">
+        Human eyes are more sensitive to brightness than color information which can also be viewed in above figure. This characteristic of the human visual
+        system allows us to modify some of the components without significantly impacting perceived
+        image quality. Y (Luminance) channel preserves the fine details of the original image, while the Cb and Cr (Chrominance) channels contain primarily color information.
+        JPEG downsamples the Cb and Cr channels by a factor of two in each dimension.
+    
+        
+        <h3> Block Splitting</h3>
+        Each channel is divided into 8×8 blocks of 64 pixels. The subsequent
+steps of the compression algorithm deals with each 8 × 8 block independently.
+
+<h3> Discrete Cosine Transformation (DCT) </h3>
+First, each value must be subtracted with 128
+to make the value range from −128 to +127. DCT transforms an 8 × 8 block of pixels
+into linear combination of 64 patterns which are given by figure below. The DCT yields
+a weight matrix indicating how much each base image contributes to the formation of
+the source image.
+<img class="notes-jpeg-name" id="me" src="/notes/images/JPEG/Dctjpeg.png" style="width:300px;height:auto;">
+
+<h3> Quantization</h3>
+Human eyes are not that well equiped to view the high frequency
+elements in an image. After chroma subsampling this is the step where information
+is lost. The weight matrix is divided by a precalculated quantization table. Quantization matrix Q ∈ 8 × 8 is used to create Di,j = ⌊ Ci,j
+/ Qi,j ⌉, ⌊.⌉ represents rounding to
+the nearest integer. Within the JPEG quantization matrix, higher values are typically
+concentrated in the bottom right quadrant. Mathematically, these higher Q values in
+the lower-right region result in a significant number of elements in the DCT (Discrete
+Cosine Transform) domain (represented by D) becoming zero. Consequently, this effectively removes high-frequency details from the image, such as sharp edges and intricate
+textures.
+
+<h3> Approximate Rounding Function</h3>
+The non-differentiability of the rounding
+function used in JPEG quantization impedes the application of gradient-based optimization techniques. To address this challenge,
+differentiable surrogate functions are used that closely approximate the rounding behavior. Examples of suitable surrogate functions include linear, Fourier, or polynomial
+functions.
+
+<h3> Decoding</h3>
+For obtaining the RGB image, all the steps are performed in reverse
+order. Inverse quantization involves element-wise multiplication with the quantization
+matrix. This process is lossy because original values cannot be recovered perfectly.
+Inverse discrete cosine transformation reverses the DCT transformation applied during compression. Finally, we perform YCbCr to RGB conversion which is an affine
+transformation involving matrix multiplication and bias addition.   
+          <h2>References</h2>
+          <ul>
+          <li>
+            JPEG-resistant Adversarial Images | <a href="https://machine-learning-and-security.github.io/papers/mlsec17_paper_54.pdf">Here</a>
+          </li>
+          <li>
+            How are Images Compressed? [46MB ↘↘ 4.07MB] JPEG In Depth |  <a href="https://www.youtube.com/watch?v=Kv1Hiv3ox8I&t=650s">Here</a> 
+          </li>
+          <li>JPEG Compression Explained, Baeldung</li>
+          <li>JPEG, Wiki </li>
+</ul>
+<br>
+<p class="notes-date">
+<i>28th March, 2024</i>
+</p>
+
+   </body>
+
+</html>
