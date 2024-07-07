@@ -33,9 +33,9 @@
             We can view it as a generalisation of the multivariate gaussian distribution over the infinite dimension. 
             Infinite dimension here means that we have a prediction function that can map infinitely many input values 
             to outputs. As gaussian distribution is characterised by mean and covariance matrix, 
-            GP is also characterised by mean function and a covariance function which is given by a kernel. Which is given by,
+            GP is also characterised by mean function and a covariance function which is given by a kernel.
             <br>
-            <i>Put Equation here</i>
+            <math xmlns="http://www.w3.org/1998/Math/MathML"><mi mathvariant="script">P</mi><mo>(</mo><mi>x</mi><mo>)</mo><mo>&#xA0;</mo><mo>&#x223c;</mo><mo>&#xA0;</mo><mi>G</mi><mi>P</mi><mo>(</mo><mi>m</mi><mo>(</mo><mi>x</mi><mo>)</mo><mo>,</mo><mo>&#xA0;</mo><mi>k</mi><mo>(</mo><mi>x</mi><mo>,</mo><mo>&#xA0;</mo><msup><mi>x</mi><mo>'</mo></msup><mo>)</mo><mo>)</mo></math>
 
             <br>
             <br>
@@ -50,7 +50,11 @@
                Kernel is responsible for giving similarity between two variables. We can have functions like RBF, Periodic, linear or 
                combination of kernels. Prediction functions that are likely to be sampled are controlled by the kernel.
                <br>
-               <i>Put Equation Here</i>
+               <br>
+               The kernel function recives two points <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>t</mi><mo>,</mo><mo>&#xA0;</mo><msup><mi>t</mi><mo>'</mo></msup><mo>&#xA0;</mo><mo>&#x2208;</mo><msup><mi mathvariant="double-struck">R</mi><mi>n</mi></msup></math> as an input and returns a similarity score between those two in the form of scaler.
+               <br>
+               <br>
+               <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>k</mi><mo>:</mo><mo>&#xA0;</mo><msup><mi mathvariant="double-struck">R</mi><mi>n</mi></msup><mo>&#xA0;</mo><mi>X</mi><mo>&#xA0;</mo><msup><mi mathvariant="double-struck">R</mi><mi>n</mi></msup><mo>&#x2192;</mo><mi mathvariant="double-struck">R</mi><mo>,</mo><mo>&#xA0;</mo><mo>&#x2211;</mo><mo>&#xA0;</mo><mo>=</mo><mo>&#xA0;</mo><mi>c</mi><mi>o</mi><mi>v</mi><mo>(</mo><mi>X</mi><mo>,</mo><mo>&#xA0;</mo><msup><mi>X</mi><mo>'</mo></msup><mo>)</mo><mo>&#xA0;</mo><mo>=</mo><mo>&#xA0;</mo><mi>k</mi><mo>(</mo><mi>t</mi><mo>,</mo><mo>&#xA0;</mo><msup><mi>t</mi><mo>'</mo></msup><mo>)</mo></math>
             </div>
             <br>
             <hr>
@@ -60,12 +64,42 @@
 
             <h3>Marginalisation</h3>
             <div class="subdivison">
-
+               Marginalization is summing out the probability of random variable X, 
+               given the joint probability distribution of X with other variables.
+               <br>
+               <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>P</mi><mo>(</mo><mi>X</mi><mo>=</mo><mi>x</mi><mo>)</mo><mo>&#xA0;</mo><mo>=</mo><munderover accent='false' accentunder='false'><mo>&#x2211;</mo><mn>0</mn><mi>n</mi></munderover><mi>P</mi><mo>(</mo><mi>X</mi><mo>=</mo><mi>x</mi><mo>|</mo><mo>&#xA0;</mo><msub><mi>Y</mi><mi>n</mi></msub><mo>)</mo></math>
+               <br>
             </div>
             <h3>Conditioning</h3>
             <div class="subdivison">
-               
+               Conditioning determines the probability of one variable depending on another variable. 
+               This allows us to perform Bayesian inference. Through conditioning, we can update our 
+               prior beliefs to obtain new distribution as we observe new data points. 
+               <br>
+               <br>
+               <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>p</mi><mo>(</mo><mi>Y</mi><mo>|</mo><mi>X</mi><mo>)</mo><mo>&#xA0;</mo><mo>=</mo><mo>&#xA0;</mo><mi>P</mi><mo>(</mo><mi>X</mi><mo>&#x2229;</mo><mi>Y</mi><mo>)</mo><mo>/</mo><mi>P</mi><mo>(</mo><mi>X</mi><mo>)</mo></math>
+
             </div>
 
         </div>
+
+        <h2>References</h2>
+        <ul>   
+  
+      </li>
+          <li>
+            A Visual Exploration of Gaussian Processes |  <a href="https://distill.pub/2019/visual-exploration-gaussian-processes/" target="_blank">Here</a> 
+          </li>
+          <li>
+            Gaussian Processes | <a href="https://www.youtube.com/watch?v=UBDgSHPxVME&t=769s" target="_blank">Here</a>
+          </li>         
+          <li>
+            Introduction to Gaussian Processes | <a href="https://d2l.ai/chapter_gaussian-processes/gp-intro.html" target="_blank">Here</a>
+          </li>
+
+</ul> 
+<br>
+<p class="notes-date">
+<i> 21st January, 2024</i>
+</p>
   </body></html>
