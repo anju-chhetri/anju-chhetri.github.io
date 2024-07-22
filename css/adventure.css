@@ -4,74 +4,49 @@
       /* margin-left: 100px;
       margin-right: 250px; */
     font-family:"Times New Roman", Times, serif;
-  }
-  .adventure-discription {
+  }    
+    
+    .adventure h3 {
+      text-align: left;
+      font-size: 25px;
+    }
+    
+    .image-container {
       display: flex;
-      justify-content: start;
-      align-items: start;
-      min-width: 150vh;
-      margin: 10px auto;
-      width: 80%;
-      /* text-align: left; */
-      /* font-family: "Open Sans", Helvetica, Arial, sans-serif; */
+      flex-direction: row; /* Stack images horizontally */
+      justify-content: center; /* Center items horizontally */
+      margin-bottom: 30px;
+      /* overflow-wrap: break-word; */
+    font-size: 18px;
     }
     
-    .adventure-date {
-      margin-left: 15px;
-    }
+
+  .image-container img {
+    margin-bottom: 10px; /* Add spacing between images (optional) */
+    border-radius: 2%;
+    margin-right: 60px; /* Increase space between two iamges*/
+
+  }
     
-    .adventure img {
-      float: left;
-      margin-left: 15px;
-      height: auto;
-      width: 100%;
-      /* width: auto; */
-      /* aspect-ratio: attr(width) / attr(height); */
-      /* max-width: 100%;  */
-      /* space between image and text */
-    }
-    
-    .voluntImg-name {
-      float: right;
-      margin-right: 1px;
-      /* position: relative; */
-      top: 0;
-      /* left: 60%; */
-      /* width: 400px;
-      height: 300px; */
-      /* background-color: rgba(0,0,0,0.5);
-      color: white; */
-      /* text-align: center; */
-      padding: 10px;
-    }
-    
-    /* .adventure image-text{
-      font-size: 20px;
-      padding-top: 3%;
-      float: left;
-      padding-left: 0px;
-    } */
-    
-    /* .adventure-text{
-      text-align: left;
-      font-family: 'Open Sans', Helvetica, Arial, sans-serif;
-      margin-left: 50px;
-      margin-right: 150px;
-    } */
-    
-    
-    .adventure h1 {
-      text-align: left;
-      font-size: 30px;
-    }
-    
-    .adventure-text {
-      font-size: 24px;
-      padding-top: 0%;
-      float: right;
-      padding-left: 0px;
-    }
-    /* adventure page ends */
+  .diary-entry {
+  /* Add styles for the overall entry container (optional) */
+  margin-bottom: 20px; /* Add spacing between entries */
+  padding: 10px; /* Add padding for content */
+}
+
+.diary-entry h3 {
+  margin-bottom: 5px; /* Add spacing after title */
+
+}
+
+.diary-entry-details {
+  font-style: italic; /* Italicize description for distinction */
+  margin-top: 0; /* Remove default margin from top */
+}
+
+
+
+ 
     
     @media only screen and (min-width: 0px) and (max-width: 1600px) {
       
@@ -105,7 +80,6 @@
     }
     
     
-    
-    
+
     /* Responsive website implementation ends */
   
