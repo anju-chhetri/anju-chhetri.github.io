@@ -74,7 +74,14 @@
               $("#initializer").load("notes/initializer.html");
           });
       </script>
-  </head>
+
+      <!-- Note 5 -->
+      <script>
+        $(function() {
+            $("#alignment").load("notes/alignment.html");
+        });
+    </script>
+    </head>
 
 
 
@@ -106,6 +113,8 @@
         <button class="tablinks" onclick="openNotes(event, 'JPEGAlgorithm')"> Differentiable JPEG Algorithm </button>
         <!-- <button class="tablinks" onclick="openNotes(event, 'KLDivergence')"> KL Divergence </button> -->
         <button class="tablinks" onclick="openNotes(event, 'initializer')">So why do we need to initialize weights in deep learning?</button>
+        <button class="tablinks" onclick="openNotes(event, 'alignment')">AI Alignment</button>
+
       </div>
       
       <div id="BasisFunction" class="tabcontent">
@@ -139,7 +148,15 @@
         <h2>So why do we initializer?</h2>
         <div id = "initializer"></div>
 
-      </div>     
+      </div> 
+      
+      <!-- Note 5 -->
+
+      <div id="alignment" class="tabcontent">
+        <h2>AI Alignment</h2>
+        <div id = "alignment"></div>
+
+      </div>
       <script>
 
       function openNotes(evt, cityName) {
