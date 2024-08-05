@@ -81,7 +81,15 @@
             $("#alignment").load("notes/alignment.html");
         });
     </script>
-    </head>
+
+    <!-- Note 6 -->
+      <script>
+        $(function() {
+            $("#adversarialMachineLearning").load("notes/adversarialMachineLearning.html");
+        });
+    </script>
+    
+  </head>
 
 
 
@@ -107,14 +115,14 @@
       </nav>
 
       <div class="tab">
-        <button class="tablinks" onclick="openNotes(event, 'BasisFunction')" id="defaultOpen">Basis Function</button>
+        <button class="tablinks" onclick="openNotes(event, 'BasisFunction')">Basis Function</button>
         <button class="tablinks" onclick="openNotes(event, 'GaussianProcesses')"  >Gaussian Processes</button>
         <!-- <button class="tablinks" onclick="openNotes(event, 'BaysianOptimisation')">Baysian Optimisation</button> -->
         <button class="tablinks" onclick="openNotes(event, 'JPEGAlgorithm')"> Differentiable JPEG Algorithm </button>
         <!-- <button class="tablinks" onclick="openNotes(event, 'KLDivergence')"> KL Divergence </button> -->
         <button class="tablinks" onclick="openNotes(event, 'initializer')">So why do we need to initialize weights in deep learning?</button>
         <button class="tablinks" onclick="openNotes(event, 'alignment')">AI Alignment</button>
-
+        <button class="tablinks" onclick="openNotes(event, 'adversarialMachineLearning')" id="defaultOpen">Adversarial Machine Learning</button>
       </div>
       
       <div id="BasisFunction" class="tabcontent">
@@ -157,6 +165,14 @@
         <div id = "alignment"></div>
 
       </div>
+
+      <!-- Note 6 -->
+      <div id="adversarialMachineLearning" class="tabcontent">
+        <h2>Adversarial Machine Learning</h2>
+        <div id = "adversarialMachineLearning"></div>
+
+      </div>
+
       <script>
 
       function openNotes(evt, cityName) {

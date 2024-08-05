@@ -150,3 +150,11 @@
   .notes-date{
     text-align: right;
   }
+
+  figcaption {
+    /* background-color: black; */
+    color: black;
+    font-style: italic;
+    padding: 2px;
+    text-align: center;
+  }
