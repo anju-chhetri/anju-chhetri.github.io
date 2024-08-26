@@ -95,6 +95,14 @@
           $("#devInterp").load("notes/devInterp.html");
       });
   </script>
+
+    <!-- Note 8 -->
+    <script>
+      $(function() {
+          $("#expecGauss").load("notes/expecGauss.html");
+      });
+  </script>
+  
   </head>
 
 
@@ -120,7 +128,7 @@
         </div>
       </nav>
       <div class="tab">
-        <button class="tablinks" onclick="openNotes(event, 'BasisFunction')" id="defaultOpen">Basis Function</button>
+        <button class="tablinks" onclick="openNotes(event, 'BasisFunction')" id="defaultOpen" >Basis Function</button>
         <button class="tablinks" onclick="openNotes(event, 'GaussianProcesses')"  >Gaussian Processes</button>
         <!-- <button class="tablinks" onclick="openNotes(event, 'BaysianOptimisation')">Baysian Optimisation</button> -->
         <button class="tablinks" onclick="openNotes(event, 'JPEGAlgorithm')"> Differentiable JPEG Algorithm </button>
@@ -129,6 +137,8 @@
         <button class="tablinks" onclick="openNotes(event, 'adversarialMachineLearning')" >Adversarial Machine Learning</button>
         <button class="tablinks" onclick="openNotes(event, 'alignment')">AI Alignment</button>
         <button class="tablinks" onclick="openNotes(event, 'devInterp')">Developmental Interpreability</button>
+        <button class="tablinks" onclick="openNotes(event, 'expecGauss')" >Expectation over a Gaussian Distribution</button>
+
       </div>
       
       <div id="BasisFunction" class="tabcontent">
@@ -180,8 +190,15 @@
       </div>
       <!-- Note 7 -->
       <div id="devInterp" class="tabcontent">
-        <h2>Adversarial Machine Learning</h2>
+        <h2>Developmental Interpreability</h2>
         <div id = "devInterp"></div>
+
+      </div>
+
+      <!-- Note 8 -->
+      <div id="expecGauss" class="tabcontent">
+        <h2>Expectation of Gaussian Distribution</h2>
+        <div id = "expecGauss"></div>
 
       </div>
       <script>
