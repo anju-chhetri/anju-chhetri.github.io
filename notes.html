@@ -103,10 +103,17 @@
       });
   </script>
   
-      <!-- Note 9 -->
-      <script>
+    <!-- Note 9 -->
+    <script>
         $(function() {
             $("#ood").load("notes/ood.html");
+        });
+    </script>
+
+      <!-- Note 10 -->
+      <script>
+        $(function() {
+            $("#polyseman").load("notes/polysemantic.html");
         });
     </script>
   </head>
@@ -145,6 +152,7 @@
         <button class="tablinks" onclick="openNotes(event, 'devInterp')">Developmental Interpreability</button>
         <button class="tablinks" onclick="openNotes(event, 'expecGauss')" >Expectation over a Gaussian Distribution</button>
         <button class="tablinks" onclick="openNotes(event, 'ood')">Out-of-Distribution</button>
+        <button class="tablinks" onclick="openNotes(event, 'polyseman')">Polysemantic Neurons</button>
 
       </div>
       
@@ -215,6 +223,13 @@
             <div id = "ood"></div>
     
           </div> 
+
+      <!-- Note 10 -->
+      <div id="polyseman" class="tabcontent">
+        <h2>Out-of-Distribution</h2>
+        <div id = "polyseman"></div>
+
+      </div> 
       <script>
 
       function openNotes(evt, cityName) {
