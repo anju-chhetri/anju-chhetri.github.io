@@ -17,6 +17,7 @@ body {
   margin-right: 250px;
   font-family:"Times New Roman", Times, serif;
   /* margin-top: 250px; */
+  font-size: 18px;
 }
 
 a{
@@ -72,7 +73,7 @@ nav {
   text-decoration: none;
   /* letter-spacing: 3px; */
   font-weight: bold;
-  font-size: 25px;
+  font-size: 20px;
   /* padding: 700px 300px 16px; */
 }
 
@@ -159,7 +160,7 @@ img {
 
 .image-text {
   /* text-align: left; */
-  font-size: 25px;
+  /* font-size: 25px; */
   padding-top: 0%;
   /* float: left; */
   margin-left: 200px;
@@ -174,12 +175,12 @@ img {
   /* font-family: "Open Sans", Helvetica, Arial, sans-serif; */
   margin-left: 200px;
   margin-right: 150px;
-  font-size: 25px;
+  /* font-size: 25px; */
 }
 
 .aboutme h2 {
   text-align: left;
-  font-size: 35px;
+  /* font-size: 35px; */
   line-height: 0.7;
 }
 /* About section ends */
@@ -190,21 +191,21 @@ img {
   /* font-family: "Open Sans", Helvetica, Arial, sans-serif; */
   margin-left: 200px;
   margin-right: 150px;
-  font-size: 26px;
+  /* font-size: 26px; */
 }
 
 .experience-name {
-  font-size: 26px;
+  /* font-size: 26px; */
   /* line-height: 0.2; */
 }
 .experience-date {
-  font-size: 22px;
+  font-size: 15px;
 }
 .experience ul {
-  font-size: 25px;
+  /* font-size: 25px; */
 }
 .experience-position{
-  font-size: 23px;
+  /* font-size: 23px; */
 }
 
 /* Experience section ends */
@@ -215,29 +216,29 @@ img {
   /* font-family: "Open Sans", Helvetica, Arial, sans-serif; */
   margin-left: 200px;
   margin-right: 150px;
-  font-size: 26px;
+  /* font-size: 26px; */
 }
 
 .project h2 {
   text-align: left;
-  font-size: 35px;
+  /* font-size: 35px; */
 }
 
 .project-name {
-  font-size: 26px;
+  /* font-size: 26px; */
 }
 
 .project h3 {
   text-align: left;
-  font-size: 23px;
+  /* font-size: 23px; */
 }
 
 .project-date {
-  font-size: 22px;
+  font-size: 15px;
 }
 
 .project ul {
-  font-size: 25px;
+  /* font-size: 25px; */
 }
 /* Project section ends */
 
@@ -247,8 +248,8 @@ img {
   /* font-family: "Open Sans", Helvetica, Arial, sans-serif; */
   margin-left: 200px;
   margin-right: 150px;
-  /* font-size: 20px; */
-  font-size: 25px;
+  /* font-size: 18px; */
+  /* font-size: 25px; */
 }
 
 .table.award-table {
@@ -257,6 +258,7 @@ img {
   margin-left: 20px;
   margin-right: 15px;
   border-collapse: collapse;
+  font-size: 18px;
 }
 .table.award-table th,
 td {
@@ -270,25 +272,25 @@ td {
   /* font-family: "Open Sans", Helvetica, Arial, sans-serif; */
   margin-left: 200px;
   margin-right: 150px;
-  font-size: 35px;
+  /* font-size: 35px; */
 }
 
 .community-name {
-  font-size: 26px;
+  /* font-size: 26px; */
   /* line-height: 0.2; */
 }
 
 .community h2 {
   text-align: left;
-  font-size: 35px;
+  /* font-size: 35px; */
 }
 
 .community-date {
-  font-size: 22px;
+  font-size: 15px;
 }
 
 .community ul {
-  font-size: 25px;
+  /* font-size: 25px; */
 }
 /* Community Involvement Section ends  */
 
