@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+.tab {
+  overflow: hidden;
+  border: 1px solid #ccc;
+  background-color: #f1f1f1;
+}
+
+.tab button {
+  background-color: inherit;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  transition: 0.3s;
+}
+
+.tab button:hover {
+  background-color: #ddd;
+}
+
+.tab button.active {
+  background-color: #ccc;
+}
+
+.tabcontent {
+  display: none;
+  padding: 6px 12px;
+  border: 1px solid #ccc;
+  border-top: none;
+}
+</style>
+</head>
+<body>
+
+<div class="tab">
+  <button class="tablinks" onclick="openTab('BasisFunction')">Basis Function</button>
+  <button class="tablinks" onclick="openTab('GaussianProcesses')">Gaussian Processes</button>
+  <button class="tablinks" onclick="openTab('adversarialMachineLearning')">Adversarial Machine Learning</button>
+</div>
+
+<div id="BasisFunction" class="tabcontent">
+  <h3>Basis Function</h3>
+  <p>Content about basis functions...</p>
+</div>
+
+<div id="GaussianProcesses" class="tabcontent">
+  <h3>Gaussian Processes</h3>
+  <p>Content about Gaussian processes...</p>
+</div>
+
+<div id="adversarialMachineLearning" class="tabcontent">
+  <h3>Adversarial Machine Learning</h3>
+  <p>Content about adversarial machine learning...</p>
+</div>
+
+<script>
+// Check if there's a hash in the URL when the page loads
+window.onload = function() {
+  // If there's a hash in the URL, open that tab
+  if(window.location.hash) {
+    // Remove the # character
+    var hash = window.location.hash.substring(1);
+    // Open the tab
+    openTab(hash);
+  } else {
+    // Default to opening the first tab
+    openTab('BasisFunction');
+  }
+};
+
+function openTab(tabName) {
+  // Hide all tabs
+  var tabcontent = document.getElementsByClassName("tabcontent");
+  for (var i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  
+  // Remove active class from all buttons
+  var tablinks = document.getElementsByClassName("tablinks");
+  for (var i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+  
+  // Show the selected tab
+  var selectedTab = document.getElementById(tabName);
+  if (selectedTab) {
+    selectedTab.style.display = "block";
+    
+    // Find and activate the button
+    for (var i = 0; i < tablinks.length; i++) {
+      if (tablinks[i].textContent.includes(tabName) || 
+          tablinks[i].getAttribute("onclick").includes(tabName)) {
+        tablinks[i].className += " active";
+        break;
+      }
+    }
+    
+    // Update the URL
+    window.location.hash = tabName;
+  }
+}
+</script>
+
+</body>
+</html>

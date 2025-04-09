@@ -156,20 +156,32 @@
         </div>
       </nav>
       <div class="tab">
-        <button class="tablinks" onclick="openNotes(event, 'BasisFunction')" id="defaultOpen">Basis Function</button>
-        <button class="tablinks" onclick="openNotes(event, 'GaussianProcesses')"  >Gaussian Processes</button>
-        <!-- <button class="tablinks" onclick="openNotes(event, 'BaysianOptimisation')">Baysian Optimisation</button> -->
-        <button class="tablinks" onclick="openNotes(event, 'JPEGAlgorithm')"> Differentiable JPEG Algorithm </button>
-        <!-- <button class="tablinks" onclick="openNotes(event, 'KLDivergence')"> KL Divergence </button> -->
-        <button class="tablinks" onclick="openNotes(event, 'initializer')">So why do we need to initialize weights in deep learning?</button>
-        <button class="tablinks" onclick="openNotes(event, 'adversarialMachineLearning')" >Adversarial Machine Learning</button>
-        <button class="tablinks" onclick="openNotes(event, 'alignment')">AI Alignment</button>
-        <button class="tablinks" onclick="openNotes(event, 'devInterp')">Developmental Interpreability</button>
-        <button class="tablinks" onclick="openNotes(event, 'expecGauss')" >Expectation over a Gaussian Distribution</button>
-        <button class="tablinks" onclick="openNotes(event, 'ood')">Out-of-Distribution</button>
-        <button class="tablinks" onclick="openNotes(event, 'polyseman')">Polysemantic Neurons</button>
-        <button class="tablinks" onclick="openNotes(event, 'openProblemsInMechInterp')"  >Open Problems in Mechanistic Interpretability</button>
-        <button class="tablinks" onclick="openNotes(event, 'misc')" >Miscellaneous</button>
+        <button class="tablinks" onclick="openNotes('BasisFunction')">Basis Function</button>
+        <button class="tablinks" onclick="openNotes('GaussianProcesses')"  >Gaussian Processes</button>
+        <button class="tablinks" onclick="openNotes('JPEGAlgorithm')"> Differentiable JPEG Algorithm </button>
+        <button class="tablinks" onclick="openNotes('initializer')">So why do we need to initialize weights in deep learning?</button>
+        <button class="tablinks" onclick="openNotes('adversarialMachineLearning')" >Adversarial Machine Learning</button>
+        <button class="tablinks" onclick="openNotes('alignment')">AI Alignment</button>
+        <button class="tablinks" onclick="openNotes('devInterp')">Developmental Interpreability</button>
+        <button class="tablinks" onclick="openNotes('expecGauss')" >Expectation over a Gaussian Distribution</button>
+        <button class="tablinks" onclick="openNotes('ood')">Out-of-Distribution</button>
+        <button class="tablinks" onclick="openNotes('polyseman')">Polysemantic Neurons</button>
+        <button class="tablinks" onclick="openNotes('openProblemsInMechInterp')"  >Open Problems in Mechanistic Interpretability</button>
+        <button class="tablinks" onclick="openNotes('misc')" >Miscellaneous</button>
+<!-- Links -->
+
+        <!-- <a href="#BasisFunction" onclick="openNotes(event, 'BasisFunction')" id="defaultOpen">Basis Function</a>
+        <a href="#GaussianProcesses" onclick="openNotes(event, 'GaussianProcesses')"  >Gaussian Processes</a>
+        <a href="#JPEGAlgorithm" onclick="openNotes(event, 'JPEGAlgorithm')"> Differentiable JPEG Algorithm </a>
+        <a href="#initializer" onclick="openNotes(event, 'initializer')">So why do we need to initialize weights in deep learning?</a>
+        <a href="#adversarialMachineLearning" onclick="openNotes(event, 'adversarialMachineLearning')" >Adversarial Machine Learning</a>
+        <a href="#alignment" onclick="openNotes(event, 'alignment')">AI Alignment</a>
+        <a href="#devInterp" onclick="openNotes(event, 'devInterp')">Developmental Interpreability</a>
+        <a href="#expecGauss" onclick="openNotes(event, 'expecGauss')" >Expectation over a Gaussian Distribution</a>
+        <a href="#ood" onclick="openNotes(event, 'ood')">Out-of-Distribution</a>
+        <a href="#polyseman" onclick="openNotes(event, 'polyseman')">Polysemantic Neurons</a>
+        <a href="#openProblemsInMechInterp" onclick="openNotes(event, 'openProblemsInMechInterp')"  >Open Problems in Mechanistic Interpretability</a>
+        <a href="#misc" onclick="openNotes(event, 'misc')" >Miscellaneous</a> -->
 
       </div>
       
@@ -261,22 +273,76 @@
 
 
 
-      function openNotes(evt, cityName) {
-        var i, tabcontent, tablinks;
-        tabcontent = document.getElementsByClassName("tabcontent");
-        for (i = 0; i < tabcontent.length; i++) {
-          tabcontent[i].style.display = "none";
+      // function openNotes(evt, notesName) {
+      //   var i, tabcontent, tablinks;
+      //   tabcontent = document.getElementsByClassName("tabcontent");
+      //   for (i = 0; i < tabcontent.length; i++) {
+      //     tabcontent[i].style.display = "none";
+      //   }
+      //   tablinks = document.getElementsByClassName("tablinks");
+      //   for (i = 0; i < tablinks.length; i++) {
+      //     tablinks[i].className = tablinks[i].className.replace(" active", "");
+      //   }
+      //   document.getElementById(notesName).style.display = "block";
+      //   evt.currentTarget.className += " active";
+      // }      
+      // document.getElementById("defaultOpen").click();
+
+      // function openNotes(evt, cityName) {
+      //   var i, tabcontent, tablinks;
+      //   tabcontent = document.getElementsByClassName("tabcontent");
+      //   for (i = 0; i < tabcontent.length; i++) {
+      //     tabcontent[i].style.display = "none";
+      //   }
+      //   tablinks = document.getElementsByClassName("tablinks");
+      //   for (i = 0; i < tablinks.length; i++) {
+      //     tablinks[i].className = tablinks[i].className.replace(" active", "");
+      //   }
+      //   document.getElementById(cityName).style.display = "block";
+      //   evt.currentTarget.className += " active";
+      // }
+      // document.getElementById("defaultOpen").click();
+      window.onload = function() {
+        if(window.location.hash) {
+          var hash = window.location.hash.substring(1);
+          openNotes(hash);
+        } else {
+          openNotes('BasisFunction');
         }
-        tablinks = document.getElementsByClassName("tablinks");
-        for (i = 0; i < tablinks.length; i++) {
-          tablinks[i].className = tablinks[i].className.replace(" active", "");
+      };
+
+      function openNotes(tabName) {
+        // Hide all tabs
+          var tabcontent = document.getElementsByClassName("tabcontent");
+          for (var i = 0; i < tabcontent.length; i++) {
+            tabcontent[i].style.display = "none";
+          }
+          
+          // Remove active class from all buttons
+          var tablinks = document.getElementsByClassName("tablinks");
+          for (var i = 0; i < tablinks.length; i++) {
+            tablinks[i].className = tablinks[i].className.replace(" active", "");
+          }
+          
+          // Show the selected tab
+          var selectedTab = document.getElementById(tabName);
+          if (selectedTab) {
+            selectedTab.style.display = "block";
+          
+          // Find and activate the button
+          for (var i = 0; i < tablinks.length; i++) {
+            if (tablinks[i].textContent.includes(tabName) || 
+                tablinks[i].getAttribute("onclick").includes(tabName)) {
+              tablinks[i].className += " active";
+              break;
+            }
+          }
+          
+          // Update the URL
+          window.location.hash = tabName;
         }
-        document.getElementById(cityName).style.display = "block";
-        evt.currentTarget.className += " active";
-      }
-      
-      // Get the element with id="defaultOpen" and click on it
-      document.getElementById("defaultOpen").click();
+}
+
       </script>
     </header>
 
