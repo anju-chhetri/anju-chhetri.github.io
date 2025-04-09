@@ -123,6 +123,14 @@
               $("#misc").load("notes/misc.html");
           });
       </script>
+
+      <!-- Note 12 -->
+      <script>
+        $(function() {
+            $("#openProblemsInMechInterp").load("notes/openProblemsInMechInterp.html");
+        });
+    </script>
+
   </head>
 
 
@@ -148,7 +156,7 @@
         </div>
       </nav>
       <div class="tab">
-        <button class="tablinks" onclick="openNotes(event, 'BasisFunction')" id="defaultOpen" >Basis Function</button>
+        <button class="tablinks" onclick="openNotes(event, 'BasisFunction')" id="defaultOpen">Basis Function</button>
         <button class="tablinks" onclick="openNotes(event, 'GaussianProcesses')"  >Gaussian Processes</button>
         <!-- <button class="tablinks" onclick="openNotes(event, 'BaysianOptimisation')">Baysian Optimisation</button> -->
         <button class="tablinks" onclick="openNotes(event, 'JPEGAlgorithm')"> Differentiable JPEG Algorithm </button>
@@ -160,7 +168,8 @@
         <button class="tablinks" onclick="openNotes(event, 'expecGauss')" >Expectation over a Gaussian Distribution</button>
         <button class="tablinks" onclick="openNotes(event, 'ood')">Out-of-Distribution</button>
         <button class="tablinks" onclick="openNotes(event, 'polyseman')">Polysemantic Neurons</button>
-        <button class="tablinks" onclick="openNotes(event, 'misc')">Miscellaneous</button>
+        <button class="tablinks" onclick="openNotes(event, 'openProblemsInMechInterp')"  >Open Problems in Mechanistic Interpretability</button>
+        <button class="tablinks" onclick="openNotes(event, 'misc')" >Miscellaneous</button>
 
       </div>
       
@@ -243,7 +252,14 @@
         <h2>Miscellaneous</h2>
         <div id = "misc"></div>
       </div>
+      <!-- Note 12 -->
+      <div id="openProblemsInMechInterp" class="tabcontent">
+        <h2>Miscellaneous</h2>
+        <div id = "openProblemsInMechInterp"></div>
+      </div>
       <script>
+
+
 
       function openNotes(evt, cityName) {
         var i, tabcontent, tablinks;
