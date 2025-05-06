@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Anju Chhetri</title>
+    <meta
+      charset="utf-8"
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+
+    <link
+      href="../../css/per_blog.css"
+      media="screen"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+ 
+  </head>
+
+
+  <body>
+    <article>
+        <h1 class="blog-title">So why do we need to initialize weights in deep learning?</h1>
+        <div class="blog-meta">Published on: May 22, 2024</div>
+        
+        <div class="blog-content">
+            Here's a visualization of how mean activation and gradient values differ with and without initialization. These experiments were performed in the paper that introduced "Xavier initialization." The researchers used a 5-hidden-layer network for their analysis.            <figure>
+                <img class="notes-jpeg-name" id="me" src="/blogs/technical/images/initializer/activationwithout.png" style="width:500px;height:auto;">
+                <img class="notes-jpeg-name" id="me" src="/blogs/technical/images/initializer/backwithout.png" style="width:500px;height:auto;">
+        
+                <figcaption>Fig: 1. Activation values with standard initialization 2. Gradient values with standarad initialization : Source <a href="http://proceedings.mlr.press/v9/glorot10a.html"> Xavier initilization</a> </figcaption>
+            </figure>
+                   
+            <figure>
+                <img class="notes-jpeg-name" id="me" src="/blogs/technical/images/initializer/activationwith.png" style="width:500px;height:auto;font-size:25px;">
+                <img class="notes-jpeg-name" id="me" src="/blogs/technical/images/initializer/backwith.png" style="width:500px;height:auto;">    
+                <figcaption>Fig: 2. Activation values with xavier initialization 2. Gradient values with xavier initialization : Source <a href="http://proceedings.mlr.press/v9/glorot10a.html"> Xavier initilization</a> </figcaption>
+            </figure>
+    
+    
+            Without initialization (standard initialization), activation and gradient values tend to vanish. This is evident in the gradient value histogram, where backpropagation leads to vanishing values as we move from layer 5 to layer 1. The figure above clearly demonstrates the need for initialization, as seen in the second picture. But why does initialization lead to such consistency? Let's explore this next.
+            <div align="center">
+            <p><span
+                class="math inline"><b><em>y</em><sub><em>l</em></sub></b> = <em>W</em><sub><em>l</em></sub> * <b><em>x</em><sub><em>l</em></sub></b> + <b><em>b</em><sub><em>l</em></sub></b>
+            </span></p> 
+          </div>
+            In the following equation, bold letters are used to represent vectors.
+            To define every term in the equation:
+            <ul>
+           <li> <math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mi mathvariant="normal">W</mi><mi mathvariant="script">l</mi></msub></math> is the weight matrix of size <math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mi mathvariant="normal">d</mi><mi mathvariant="normal">l</mi></msub><mo>-</mo><mi mathvariant="normal">to</mi><mo>-</mo><msub><mi mathvariant="normal">n</mi><mi mathvariant="normal">l</mi></msub></math> from layer l-1 to l.</li>
+            <li><math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mi mathvariant="bold">x</mi><mi mathvariant="bold">l</mi></msub></math> is the output of l-1 layer that was passed through activation function  f(.). It is a <math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mi mathvariant="normal">n</mi><mi mathvariant="normal">l</mi></msub><mo>-</mo><mi mathvariant="normal">by</mi><mo>-</mo><mn>1</mn></math> vector. </li>
+            <li><math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mi mathvariant="normal">b</mi><mi mathvariant="normal">l</mi></msub></math> represents biases of layer l.</li>
+            <li><math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mi mathvariant="normal">y</mi><mi mathvariant="normal">l</mi></msub></math> is the output of the layer l before it is passed to an activation function.</li>
+            </ul>
+    
+            Some assumptions have to be made to move further:
+            <ul> 
+            <li>Elements of <math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mi mathvariant="normal">W</mi><mi mathvariant="script">l</mi></msub></math>  are independent to each other and share the same distribution. </li>
+          <li>Elements of <math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mi mathvariant="bold">x</mi><mi mathvariant="bold">l</mi></msub></math> are independent to each other and share the same distribution.</li>
+           <li>Both <math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mi mathvariant="normal">W</mi><mi mathvariant="script">l</mi></msub></math> and <math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mi mathvariant="bold">x</mi><mi mathvariant="bold">l</mi></msub></math> are independent to each other. </li>
+            
+            </ul>
+            <div align="center">
+            <math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mi mathvariant="normal">W</mi><mi mathvariant="normal">l</mi></msub><msub><mi mathvariant="bold">x</mi><mi mathvariant="bold">l</mi></msub><mo>=</mo><mo>&#xA0;</mo><mfenced open="[" close="]"><mtable><mtr><mtd><munderover accent='false' accentunder='false'><mo>&#x2211;</mo><mrow><mi mathvariant="normal">i</mi><mo>=</mo><mn>1</mn></mrow><mrow><msub><mi mathvariant="normal">n</mi><mi mathvariant="normal">l</mi></msub></mrow></munderover><msub><mi mathvariant="normal">w</mi><mrow><mn>1</mn><mo>,</mo><mi mathvariant="normal">i</mi></mrow></msub><msub><mi mathvariant="normal">x</mi><mi mathvariant="normal">i</mi></msub></mtd></mtr><mtr><mtd><munderover accent='false' accentunder='false'><mo>&#x2211;</mo><mrow><mi mathvariant="normal">i</mi><mo>=</mo><mn>1</mn></mrow><mrow><msub><mi mathvariant="normal">n</mi><mi mathvariant="normal">l</mi></msub></mrow></munderover><msub><mi mathvariant="normal">w</mi><mrow><mn>2</mn><mo>,</mo><mi mathvariant="normal">i</mi></mrow></msub><msub><mi mathvariant="normal">x</mi><mi mathvariant="normal">i</mi></msub></mtd></mtr><mtr><mtd><mo>.</mo></mtd></mtr><mtr><mtd><mo>.</mo></mtd></mtr><mtr><mtd><munderover accent='false' accentunder='false'><mo>&#x2211;</mo><mrow><mi mathvariant="normal">k</mi><mo>=</mo><mn>1</mn></mrow><mrow><msub><mi mathvariant="normal">n</mi><mi mathvariant="normal">l</mi></msub></mrow></munderover><msub><mi mathvariant="normal">w</mi><mrow><mi mathvariant="normal">d</mi><mo>,</mo><mi mathvariant="normal">i</mi></mrow></msub><msub><mi mathvariant="normal">x</mi><mi mathvariant="normal">i</mi></msub></mtd></mtr></mtable></mfenced></math>
+          </div>
+            
+            <p>If we take variance of this expression than we get a diagonal matrix, because of the independence of the variables. Variance of the right handside is eqal to the trace of the covariance of the left handside (need to see why). </p>
+            <div align="center">
+            <math xmlns="http://www.w3.org/1998/Math/MathML"><mspace linebreak="newline"/><mi mathvariant="normal">Var</mi><mo>[</mo><msub><mi mathvariant="normal">W</mi><mi mathvariant="normal">l</mi></msub><msub><mi mathvariant="bold">x</mi><mi mathvariant="bold">l</mi></msub><mo>]</mo><mo>=</mo><mo>&#xA0;</mo><mi mathvariant="normal">Tr</mi><mfenced open="[" close="]"><mtable><mtr><mtd><mi mathvariant="normal">var</mi><mo>[</mo><munderover accent='false' accentunder='false'><mo>&#x2211;</mo><mrow><mi mathvariant="normal">i</mi><mo>=</mo><mn>1</mn></mrow><mrow><msub><mi mathvariant="normal">n</mi><mi mathvariant="normal">l</mi></msub></mrow></munderover><msub><mi mathvariant="normal">w</mi><mrow><mn>1</mn><mo>,</mo><mi mathvariant="normal">i</mi></mrow></msub><msub><mi mathvariant="normal">x</mi><mi mathvariant="normal">i</mi></msub><mo>]</mo></mtd><mtd><mn>0</mn></mtd><mtd><mo>.</mo></mtd><mtd><mn>0</mn></mtd></mtr><mtr><mtd><mn>0</mn></mtd><mtd><mi mathvariant="normal">var</mi><mo>[</mo><munderover accent='false' accentunder='false'><mo>&#x2211;</mo><mrow><mi mathvariant="normal">i</mi><mo>=</mo><mn>1</mn></mrow><mrow><msub><mi mathvariant="normal">n</mi><mi mathvariant="normal">l</mi></msub></mrow></munderover><msub><mi mathvariant="normal">w</mi><mrow><mn>2</mn><mo>,</mo><mi mathvariant="normal">i</mi></mrow></msub><msub><mi mathvariant="normal">x</mi><mi mathvariant="normal">i</mi></msub><mo>]</mo></mtd><mtd><mo>.</mo></mtd><mtd><mn>0</mn></mtd></mtr><mtr><mtd><mo>.</mo></mtd><mtd><mo>.</mo></mtd><mtd><mo>.</mo></mtd><mtd><mo>.</mo></mtd></mtr><mtr><mtd><mn>0</mn></mtd><mtd><mn>0</mn></mtd><mtd><mn>0</mn></mtd><mtd><mi mathvariant="normal">var</mi><mo>[</mo><munderover accent='false' accentunder='false'><mo>&#x2211;</mo><mrow><mi mathvariant="normal">i</mi><mo>=</mo><mn>1</mn></mrow><mrow><msub><mi mathvariant="normal">n</mi><mi mathvariant="normal">l</mi></msub></mrow></munderover><msub><mi mathvariant="normal">w</mi><mrow><mi mathvariant="normal">d</mi><mo>,</mo><mi mathvariant="normal">i</mi></mrow></msub><msub><mi mathvariant="normal">x</mi><mi mathvariant="normal">i</mi></msub><mo>]</mo></mtd></mtr></mtable></mfenced><mspace linebreak="newline"/><mspace linebreak="newline"/><mspace linebreak="newline"/><mspace linebreak="newline"/><mspace linebreak="newline"/></math>
+            </div>
+    
+            <div align="center">
+            <math xmlns="http://www.w3.org/1998/Math/MathML"><mo>=</mo><mo>&#xA0;</mo><munderover accent='false' accentunder='false'><mo>&#x2211;</mo><mrow><mi>j</mi><mo>=</mo><mn>1</mn></mrow><mrow><msub><mi>d</mi><mi>l</mi></msub></mrow></munderover><mi>v</mi><mi>a</mi><mi>r</mi><mo>[</mo><munderover accent='false' accentunder='false'><mo>&#x2211;</mo><mrow><mi>k</mi><mo>=</mo><mn>1</mn></mrow><mrow><msub><mi>n</mi><mi>l</mi></msub></mrow></munderover><msub><mi>W</mi><mrow><mi>j</mi><mo>,</mo><mi>k</mi></mrow></msub><mo>*</mo><msub><mi>x</mi><mi>k</mi></msub><mo>]</mo></math>        
+            </div>
+            <br>
+            Because the variables are independent to each other variance of sum is sum of variance, 
+            <div align="center">
+            <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>v</mi><mi>a</mi><mi>r</mi><mo>[</mo><mi>X</mi><mo>+</mo><mi>Y</mi><mo>]</mo><mo>&#xA0;</mo><mo>=</mo><mo>&#xA0;</mo><mi>v</mi><mi>a</mi><mi>r</mi><mo>[</mo><mi>X</mi><mo>]</mo><mo>&#xA0;</mo><mo>+</mo><mo>&#xA0;</mo><mi>v</mi><mi>a</mi><mi>r</mi><mo>[</mo><mi>Y</mi><mo>]</mo></math>
+            </div>
+            <br>
+            <div align="center">
+            <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>v</mi><mi>a</mi><mi>r</mi><mo>[</mo><msub><mi>W</mi><mi>l</mi></msub><msub><mi mathvariant="bold-italic">x</mi><mi mathvariant="bold-italic">l</mi></msub><mo>]</mo><mo>=</mo><munderover accent='false' accentunder='false'><mo>&#x2211;</mo><mrow><mi>j</mi><mo>=</mo><mn>1</mn></mrow><mrow><msub><mi>d</mi><mi>l</mi></msub></mrow></munderover><munderover accent='false' accentunder='false'><mo>&#x2211;</mo><mrow><mi>k</mi><mo>=</mo><mn>1</mn></mrow><mrow><msub><mi>n</mi><mi>l</mi></msub></mrow></munderover><mi>v</mi><mi>a</mi><mi>r</mi><mo>(</mo><msub><mi>W</mi><mi>l</mi></msub><msub><mi>x</mi><mi>l</mi></msub><mo>)</mo><mo>&#xA0;</mo><mo>=</mo><mo>&#xA0;</mo><msub><mi>d</mi><mi>l</mi></msub><mo>&#xA0;</mo><mo>*</mo><mo>&#xA0;</mo><msub><mi>n</mi><mi>l</mi></msub><mo>&#xA0;</mo><mo>*</mo><mo>&#xA0;</mo><mi>v</mi><mi>a</mi><mi>r</mi><mo>(</mo><msub><mi>W</mi><mi>l</mi></msub><msub><mi>x</mi><mi>l</mi></msub><mo>)</mo></math>
+            </div>
+            <br>
+            Further, simplifying it we get,
+            <br>
+            <div align="center">
+    
+            <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>v</mi><mi>a</mi><mi>r</mi><mo>[</mo><msub><mi mathvariant="bold-italic">y</mi><mi mathvariant="bold-italic">l</mi></msub><mo>]</mo><mo>=</mo><msub><mi>d</mi><mi>l</mi></msub><mo>&#xA0;</mo><mo>*</mo><mo>&#xA0;</mo><mi>v</mi><mi>a</mi><mi>r</mi><mo>(</mo><msub><mi>y</mi><mi>l</mi></msub><mo>)</mo></math>
+            </div>
+            <br>
+            Relation between variance and expectation is given by,
+            <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>v</mi><mi>a</mi><mi>r</mi><mo>(</mo><mi>X</mi><mo>)</mo><mo>&#xA0;</mo><mo>=</mo><mo>&#xA0;</mo><mi mathvariant="double-struck">E</mi><mo>[</mo><msup><mi>X</mi><mn>2</mn></msup><mo>]</mo><mo>&#xA0;</mo><mo>-</mo><mo>&#xA0;</mo><mi mathvariant="double-struck">E</mi><mrow><mo>[</mo><mi>X</mi></mrow><msup><mo>]</mo><mn>2</mn></msup></math>
+            <br>
+            So,
+            <div align="center">
+            <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>v</mi><mi>a</mi><mi>r</mi><mo>[</mo><msub><mi>y</mi><mi>l</mi></msub><mo>]</mo><mo>&#xA0;</mo><mo>=</mo><mo>&#xA0;</mo><msub><mi>n</mi><mi>l</mi></msub><mo>&#xA0;</mo><mo>*</mo><mo>&#xA0;</mo><mo>(</mo><mi mathvariant="double-struck">E</mi><mo>[</mo><msup><msub><mi>w</mi><mi>l</mi></msub><mn>2</mn></msup><mo>]</mo><mo>*</mo><mi mathvariant="double-struck">E</mi><mrow><mo>[</mo><mrow><msup><msub><mi>x</mi><mi>l</mi></msub><mn>2</mn></msup></mrow><mo>]</mo></mrow><mo>&#xA0;</mo><mo>-</mo><mo>&#xA0;</mo><mi mathvariant="double-struck">E</mi><mo>[</mo><msub><mi>w</mi><mi>l</mi></msub><msup><mo>]</mo><mn>2</mn></msup><mo>*</mo><mi mathvariant="double-struck">E</mi><mrow><mo>[</mo><mrow><msub><mi>x</mi><mi>l</mi></msub><msup><mo>]</mo><mn>2</mn></msup></mrow></mrow><mo>]</mo><mo>)</mo></math>
+            </div>
+            <br>
+            If we choose the distribution of w_l such that its mean is zero, then we can write,
+            <br>
+            <div align="center">
+    
+            <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>v</mi><mi>a</mi><mi>r</mi><mo>[</mo><msub><mi>y</mi><mi>l</mi></msub><mo>]</mo><mo>&#xA0;</mo><mo>=</mo><mo>&#xA0;</mo><msub><mi>n</mi><mi>l</mi></msub><mo>&#xA0;</mo><mo>*</mo><mo>&#xA0;</mo><mi>v</mi><mi>a</mi><mi>r</mi><mo>[</mo><msub><mi>w</mi><mi>l</mi></msub><mo>]</mo><mo>*</mo><mi mathvariant="double-struck">E</mi><mrow><mo>[</mo><mrow><msup><msub><mi>x</mi><mi>l</mi></msub><mn>2</mn></msup></mrow><mo>]</mo></mrow></math>               
+            </div>
+            <br>
+            Note that we aren't making any assumptions about the mean of x_l so, <math xmlns="http://www.w3.org/1998/Math/MathML"><mi mathvariant="double-struck">E</mi><mo>[</mo><msup><msub><mi>x</mi><mi>l</mi></msub><mn>2</mn></msup><mo>]</mo><mo>&#xA0;</mo><mo>&#x2260;</mo><mi>v</mi><mi>a</mi><mi>r</mi><mo>[</mo><msub><mi>x</mi><mi>l</mi></msub><mo>]</mo></math>
+            <br>
+            <br>
+            Two of the most popular initilization techniques are kaiming and xavier initialization. Xavier doesn't take activation into account while kaiming does. Let's move forward with kaiming initilization. Lets assume activation used in the previous layer is ReLU activation, which is given by,
+            <div align="center">
+            <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>R</mi><mi>e</mi><mi>L</mi><mi>U</mi><mo>(</mo><mi>x</mi><mo>)</mo><mo>&#xA0;</mo><mo>=</mo><mo>&#xA0;</mo><mfenced open="{" close=""><mtable columnalign="left"><mtr><mtd><mi>x</mi></mtd><mtd><mi>i</mi><mi>f</mi><mo>&#xA0;</mo><mi>x</mi><mo>&#x2265;</mo><mn>0</mn></mtd></mtr><mtr><mtd><mn>0</mn></mtd><mtd><mi>i</mi><mi>f</mi><mo>&#xA0;</mo><mi>x</mi><mo>&lt;</mo><mn>0</mn></mtd></mtr></mtable></mfenced></math>
+            </div>
+            
+            <div align="center">
+            <math xmlns="http://www.w3.org/1998/Math/MathML"><mi mathvariant="double-struck">E</mi><mo>[</mo><msup><msub><mi>x</mi><mi>l</mi></msub><mn>2</mn></msup><mo>]</mo><mo>&#xA0;</mo><mo>=</mo><mo>&#xA0;</mo><mi mathvariant="double-struck">E</mi><mo>[</mo><mi>m</mi><mi>a</mi><mi>x</mi><msup><mrow><mo>(</mo><mrow><mn>0</mn><mo>,</mo><mo>&#xa0;</mo><msub><mi>y</mi><mrow><mi>l</mi><mo>-</mo><mn>1</mn></mrow></msub></mrow><mo>)</mo></mrow><mn>2</mn></msup><mo>]</mo><mo>&#xA0;</mo><mspace linebreak="newline"/><mo>&#xA0;</mo><mo>&#xA0;</mo><mo>&#xA0;</mo><mo>&#xA0;</mo><mo>&#xA0;</mo><mo>&#xA0;</mo><mo>&#xA0;</mo><mo>&#xA0;</mo><mo>=</mo><mo>&#xA0;</mo><mfrac><mn>1</mn><mn>2</mn></mfrac><mi mathvariant="double-struck">E</mi><mo>[</mo><msup><msub><mi mathvariant="normal">y</mi><mrow><mi mathvariant="normal">l</mi><mo>-</mo><mn>1</mn></mrow></msub><mn>2</mn></msup><mo>]</mo><mo>&#xA0;</mo><mspace linebreak="newline"/><mo>&#xA0;</mo><mo>&#xA0;</mo><mo>&#xA0;</mo><mo>&#xA0;</mo><mo>&#xA0;</mo><mo>&#xA0;</mo><mo>&#xA0;</mo><mo>&#xA0;</mo><mo>=</mo><mo>&#xA0;</mo><mfrac><mn>1</mn><mn>2</mn></mfrac><mi mathvariant="normal">var</mi><mo>[</mo><msub><mi mathvariant="normal">x</mi><mrow><mi mathvariant="normal">l</mi><mo>-</mo><mn>1</mn></mrow></msub><mo>]</mo><mspace linebreak="newline"/><mo>&#xA0;</mo></math>          <ul>
+            </div>        
+            
+            How did we get that (1/2)? Here, we assume that <math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mi mathvariant="normal">w</mi><mrow><mi mathvariant="normal">l</mi><mo>-</mo><mn>1</mn></mrow></msub></math> has zero mean and symmetric distribution 
+            around 0 and <math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mi mathvariant="normal">b</mi><mrow><mi mathvariant="normal">l</mi><mo>-</mo><mn>1</mn></mrow></msub><mo>&#xA0;</mo><mo>=</mo><mo>&#xA0;</mo><mn>0</mn></math>. 
+            So, <math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mi mathvariant="normal">y</mi><mrow><mi mathvariant="normal">l</mi><mo>-</mo><mn>1</mn></mrow></msub></math> has zero mean and has a symmetric distribution around zero. So, probability of
+            <math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mi mathvariant="normal">y</mi><mrow><mi mathvariant="normal">l</mi><mo>-</mo><mn>1</mn></mrow></msub></math> >0 is 1/2.
+    
+    
+    
+                <br>
+                <br>
+              <div align="center">
+              <math xmlns="http://www.w3.org/1998/Math/MathML"><mi mathvariant="normal">var</mi><mo>[</mo><msub><mi mathvariant="normal">y</mi><mi mathvariant="normal">l</mi></msub><mo>]</mo><mo>&#xA0;</mo><mo>=</mo><mo>&#xA0;</mo><msub><mi mathvariant="normal">n</mi><mi mathvariant="normal">l</mi></msub><mi mathvariant="normal">var</mi><mo>[</mo><msub><mi mathvariant="normal">w</mi><mi mathvariant="normal">l</mi></msub><mo>]</mo><mo>*</mo><mfrac><mn>1</mn><mn>2</mn></mfrac><mi mathvariant="normal">var</mi><mo>[</mo><msub><mi mathvariant="normal">y</mi><mrow><mi mathvariant="normal">l</mi><mo>-</mo><mn>1</mn></mrow></msub><mo>]</mo></math> 
+            </div>
+            <br>
+              We can establish a recursive realtion from the above equation which is given by
+              <div align="center">
+    
+              <math xmlns="http://www.w3.org/1998/Math/MathML"><mi mathvariant="normal">var</mi><mo>[</mo><msub><mi mathvariant="normal">y</mi><mi mathvariant="normal">L</mi></msub><mo>]</mo><mo>&#xA0;</mo><mo>=</mo><mi>var</mi><mrow><mo>[</mo><mrow><msub><mi mathvariant="normal">y</mi><mn>1</mn></msub></mrow><mo>]</mo></mrow><mo>(</mo><munderover accent='false' accentunder='false'><mo>&#x220f;</mo><mrow><mi>l</mi><mo>=</mo><mn>2</mn></mrow><mi>L</mi></munderover><mo>&#xA0;</mo><mfrac><mn>1</mn><mn>2</mn></mfrac><msub><mi mathvariant="normal">n</mi><mi mathvariant="normal">l</mi></msub><mi mathvariant="normal">var</mi><mo>[</mo><msub><mi mathvariant="normal">w</mi><mi mathvariant="normal">l</mi></msub><mo>]</mo><mo>)</mo></math>
+            </div>
+            <br>
+            This equation explains everything. For very deep neural networks (large L), if the term in brackets is less than 1, the variance of the activations in the final layer tends to shrink dramatically. Conversely, if the term is greater than 1, the variance can explode. This highlights why the ideal value within the brackets is 1. It helps maintain a balanced flow of gradients throughout the network, preventing both vanishing and exploding gradients during training.          
+            <br>
+            <div align="center">
+              <math xmlns="http://www.w3.org/1998/Math/MathML"><mo>&#x2200;</mo><mi mathvariant="script">l</mi><mo>,</mo><mo>&#xA0;</mo><mfrac><mn>1</mn><mn>2</mn></mfrac><msub><mi mathvariant="normal">n</mi><mi mathvariant="script">l</mi></msub><mi mathvariant="normal">var</mi><mo>[</mo><msub><mi mathvariant="normal">w</mi><mi mathvariant="script">l</mi></msub><mo>]</mo><mo>&#xA0;</mo><mo>=</mo><mo>&#xA0;</mo><mn>1</mn></math>          
+              </div>
+         <br>
+         An intersting observation is that the variance of first layer does not make much of a difference.
+            
+         <h2>References</h2>
+            <ul>   
+      
+          </li>
+              <li>
+                How to initialize deep neural networks? Xavier and Kaiming initialization |  <a href="https://pouannes.github.io/blog/initialization/" target="_blank">Here</a> 
+              </li>
+              <li>
+                <a href="https://arxiv.org/pdf/1502.01852" target="_blank">Delving Deep into Rectifiers:
+                  Surpassing Human-Level Performance on ImageNet Classification</a>
+              </li>
+    
+    </ul> 
+
+        </div>
+        <button class="back-button" onclick="history.back()">← Back</button>
+
+    </article>
+</body>
+</html>

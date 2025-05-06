@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Anju Chhetri</title>
+    <meta
+      charset="utf-8"
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+
+    <link
+      href="../../css/per_blog.css"
+      media="screen"
+      rel="stylesheet"
+      type="text/css"
+    />
+  </head>
+
+
+  <body>
+    <article>
+        <h1 class="blog-title">Adversarial Machine Learning</h1>
+        <div class="blog-meta">Published on:  August 6, 2024</div>
+        
+        <hr>
+        <i>I came across a Notion page of my undergraduate thesis. Although it's not structured properly, I found some interesting elements.</i>
+        <hr><br>
+
+        Adversarial Machine Learning is the field of study that focuses on attacks on machine learning algorithms and 
+        defenses against such attacks. These attacks are carried out by adding perturbations that manipulate 
+        the input-output mapping learned by the neural network. Perturbed inputs 
+        are indistinguishable from the original input. The presence of such adversarial examples is the 
+        inherent weakness of the neural network which causes it to work well on naturally occurring data 
+        but can drastically change a network's response when the points lie outside of the data distribution.
+        <figure >
+            <img class="notes-jpeg-name" id="me" src="/blogs/technical/images/Adversarial/goodfellow.png" style="width:500px;height:auto;">
+            <figcaption>Fig 1: Demonstration of fast adversarial example generation by [1]</figcaption>
+          </figure> 
+        <br>
+        <br>
+        In an adversarial environment, it is anticipated that the adversarial opponent tries to cause
+    machine learning to fail in many ways. An adversary can poison a model’s classifications,
+    often in a highly targeted manner by crafting input data that has similar visual features to normal
+    data but is capable of fooling the model as seen in fig 1.
+    <br>
+    <br>
+    [2] shows an intersting visualization on how adversarial examples in diffusion models prevent 
+    diffusion models from extracting image features as conditions by inducing out-of-distribution features.
+    
+    <figure >
+        <img class="notes-jpeg-name" id="me" src="/blogs/technical/images/Adversarial/oodAIM.png" style="width:500px;height:auto;">
+        <figcaption>Fig 2: Comparison of workflows for adversarial examples in classification models and diffusion models by [2]</figcaption>
+      </figure> 
+    
+    Types of adversarial attack:
+    <ul>
+        <li>Black box</li>
+        <li>White box</li>
+        <ul>
+            <li>Single pixel attack</li>
+            <li>Fast Gradient Sign Method (FGSM)</li>
+            <li>Iterative-Fast Gradient Sign Method (IFGSM)</li>
+            <li>Jacobia-Based Saliency Map Attack</li>
+            <li>Carlini and Wager Attack</li>
+        </ul>
+    </ul>
+    
+    Adversarial examples can be used to generate poisoned data, but given the huge amount of data required to train these generative models—which does not 
+    translate well to real-world numbers for an adversary to perform data poisoning—why does data poisoning work for generative models like diffusion?
+    <br>
+    Answer from: [3]
+    <br>
+    <b>Concept sparsity makes it feasible to poison text-to-image diffusion models </b>
+    <br>
+    <p style="text-align: center;">
+    While the total volume of training data for diffusion models is substantial, the amount of training 
+    data associated with any single concept is limited, and significantly unbalanced across different 
+    concepts. For the vast majority of concepts, including common objects and styles that appear frequently 
+    in real-world prompts, each is associated with a very small fraction of the total training set, e.g., 
+    0.1% for “dog” and 0.04% for “fantasy” (LAION-Aesthetic dataset).
+    Furthermore, such sparsity remains at the semantic level, after we aggregate training samples 
+    associated with a concept and all its semantically related “neighbors” (e.g., “puppy” and “wolf” are 
+    both semantically related to “dog”).
+    </p>
+    
+    
+        <h2>References</h2>
+        [1] Explaining and Harnessing Adversarial Examples |  <a href="https://arxiv.org/abs/1412.6572" target="_blank"> here</a>
+        <br>
+        [2] Adversarial Example Does Good: Preventing Painting Imitation from Diffusion Models via Adversarial Examples | <a href="" target="_blank"> here</a>
+        <br>
+        [3] Nightshade: Prompt-Specific Poisoning Attacks on Text-to-Image Generative Models | <a href="https://arxiv.org/pdf/2310.13828" target="_blank"> here</a>
+        <div class="blog-content">
+
+
+        </div>
+    
+        <button class="back-button" onclick="history.back()">← Back</button>
+    </article>
+</body>
+</html>

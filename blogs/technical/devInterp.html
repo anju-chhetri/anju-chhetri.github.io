@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Anju Chhetri</title>
+    <meta
+      charset="utf-8"
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+
+    <link
+      href="../../css/per_blog.css"
+      media="screen"
+      rel="stylesheet"
+      type="text/css"
+    />
+  </head>
+
+
+  <body>
+    <article>
+        <h1 class="blog-title">Developmental Interpretability</h1>
+        <div class="blog-meta">Published on: June 10, 2024</div>
+        
+        <div class="blog-content">
+
+            <b>Phase transition:</b> When the information of the new data sample is incorprated into the network weights, then the posterior can shift drastically.
+            These phase transitions can be thought as an internal model selection.
+           
+            <figure >
+             <img class="notes-jpeg-name" id="me" src="/blogs/technical/images/AIAlignment/phaseTransitions.png" style="width:500px;height:auto;">
+             <img class="notes-jpeg-name" id="me" src="/blogs/technical/images/AIAlignment/phaseTransitionAndCLT.png" style="width:500px;height:auto;">
+           
+             <figcaption>Fig 1: Phase transition visualization in neural networks [1]</figcaption>
+           </figure> 
+           
+           <h4>Developmental Interpretability</h4>
+           Developmental Interpretability studies the structural formation and evolution of neural networks during training. It helps understand how networks develop their internal representation and organize information during training.
+            <br><br>
+           "We term this developmental interpretability because of the parallel with developmental biology, which aims to understand the final 
+           state of a different class of complex self-assembling systems (living organisms) by analyzing the key steps in development from an embryonic state." [1]
+           <br>
+           <br>
+           The goal of developmental interpretability in the context of alignment is to:
+           <ul>
+                 <li>advance the science of detecting when structural changes happen during training,</li>
+                 <li>localize these changes to a subset of the weights</li>
+                 <li>give the changes their proper context within the broader set of computational structures in the current state of the network.</li>
+           </ul>
+           <h2>References</h2>
+             <ul>
+               <li>Towards Developmental Interpretability| <a href="https://www.lesswrong.com/s/SfFQE8DXbgkjk62JK/p/TjaeCWvLZtEDAS5Ex" target="_blank">Here</a></li>
+             </ul>
+        </div>
+        <button class="back-button" onclick="history.back()">← Back</button>
+
+    </article>
+</body>
+</html>

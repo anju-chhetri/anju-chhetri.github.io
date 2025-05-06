@@ -1,21 +1,41 @@
 <!DOCTYPE html>
-<html>
-  
+<html lang="en">
+<head>
+    <title>Anju Chhetri</title>
+    <meta
+      charset="utf-8"
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+
+    <link
+      href="../../css/per_blog.css"
+      media="screen"
+      rel="stylesheet"
+      type="text/css"
+    />
+  </head>
+
+
   <body>
-            <h2>Differentiable JPEG Algorithm</h2>
+    <article>
+        <h1 class="blog-title">Differentiable JPEG Algorithm</h1>
+        <div class="blog-meta">Published on: March 28, 2024</div>
         
-            <img class="notes-jpeg-name" id="me" src="/notes/images/JPEG/diff-jpeg.png" style="width:700px;height:auto;">
+        <div class="blog-content">
+
+            <img class="notes-jpeg-name" id="me" src="/blogs/technical/images/JPEG/diff-jpeg.png" style="width:700px;height:auto;">
 
             <h3> Color Space Conversion</h3> 
             Most images are stored in the RGB (Red, Green, and Blue) color space. For JPEG we
 need to convert it into YCbCr format. In this format, luminance information is stored
 as a single component (Y) and chrominance information is stored as two color-difference
 components (Cb and Cr). For conversion we use the following formula:
-<img class="notes-jpeg-name" id="me" src="/notes/images/JPEG/RGBtoYCbCr.png" style="width:400px;height:auto;">
+<img class="notes-jpeg-name" id="me" src="/blogs/technical/images/JPEG/RGBtoYCbCr.png" style="width:400px;height:auto;">
 
 
         <h3> Chroma Subsampling </h3>
-        <img class="notes-jpeg-name" id="me" src="/notes/images/JPEG/ycbcr.png" style="width:700px;height:auto;">
+        <img class="notes-jpeg-name" id="me" src="/blogs/technical/images/JPEG/ycbcr.png" style="width:700px;height:auto;">
         Human eyes are more sensitive to brightness than color information which can also be viewed in above figure. This characteristic of the human visual
         system allows us to modify some of the components without significantly impacting perceived
         image quality. Y (Luminance) channel preserves the fine details of the original image, while the Cb and Cr (Chrominance) channels contain primarily color information.
@@ -32,7 +52,7 @@ to make the value range from −128 to +127. DCT transforms an 8 × 8 block of p
 into linear combination of 64 patterns which are given by figure below. The DCT yields
 a weight matrix indicating how much each base image contributes to the formation of
 the source image.
-<img class="notes-jpeg-name" id="me" src="/notes/images/JPEG/Dctjpeg.png" style="width:300px;height:auto;">
+<img class="notes-jpeg-name" id="me" src="/blogs/technical/images/JPEG/Dctjpeg.png" style="width:300px;height:auto;">
 
 <h3> Quantization</h3>
 Human eyes are not that well equiped to view the high frequency
@@ -68,11 +88,10 @@ transformation involving matrix multiplication and bias addition.
           <li>JPEG Compression Explained, Baeldung</li>
           <li>JPEG, Wiki </li>
 </ul>
-<br>
-<p class="notes-date">
-<i>28th March, 2024</i>
-</p>
 
-   </body>
+        </div>
+        <button class="back-button" onclick="history.back()">← Back</button>
 
+    </article>
+</body>
 </html>

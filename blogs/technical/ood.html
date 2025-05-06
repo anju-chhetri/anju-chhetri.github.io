@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Anju Chhetri</title>
+    <meta
+      charset="utf-8"
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+
+    <link
+      href="../../css/per_blog.css"
+      media="screen"
+      rel="stylesheet"
+      type="text/css"
+    />
+  </head>
+
+
+  <body>
+    <article>
+        <h1 class="blog-title">Out of Distribution</h1>
+        <div class="blog-meta">Published on: September 1, 2024</div>
+        
+        <hr>
+        <i>If I were to write an abstract on my last three months (May-July, 2024), one of the keywords would undoubtedly be MOOD. But hold on, it's not mood swings - I'm talking about Medical Out-of-Distribution (MOOD).</i>
+        <hr><br>
+        <div class="blog-content">
+            <b>Out-of-Distribution (OOD)</b>: OOD refers to data points that deviate significantly from the statistical 
+            properties of the sample distribution (under the assumption that sample data points are identically 
+            distributed). For instance, the average height of a Nepalese woman is 4 feet 11.39 inches, so a European woman with an average height of 5 feet 6 inches would be considered an OOD data point in this distribution.
+            
+            <br>
+            <h3> OOD and Machine Learning</h3>
+            In machine learning, OOD data refers to instances whose statistical 
+            properties differ significantly from the data that the model encountered during training. 
+            Why does this matter? Because most models operate under the closed-world assumption, meaning 
+            they expect training and testing data to share the same distribution.
+            
+            
+            <br>
+            <br>
+            Imagine a neural network trained to classify cats and dogs. What happens if it encounters an image 
+            of a fish in its testing dataset? The network will try to force the fish into one of the known 
+            categories—cat or dog—likely with high confidence which is especially prevalent in networks trained with 
+            cross-entropy loss function.
+            
+            <figure >
+              <img class="notes-jpeg-name" id="me" src="/blogs/technical/images/OOD/ood.png" style="width:500px;height:auto;">
+              <figcaption>[1]</figcaption>
+            </figure> 
+            
+            <br>
+            
+            
+            This scenario is common in real-world deployments, where the closed-world assumption often fails. 
+            This issue becomes critical in domains like healthcare, where the consequences of a model making an 
+            incorrect prediction with high confidence can be dire. The medical field is highly vulnerable to OOD 
+            problems due to the difficulty in obtaining training datasets-and the resulting long tailed distribution
+             of classes.
+            
+            
+            
+            <h2>References</h2>
+              <ul>
+                <li> What is Out-of-Distribution (OOD)?| <a href="https://blog.munhou.com/2022/12/01/Detecting%20Out-of-Distribution%20Samples%20with%20Knn/" target="_blank">Here</a></li>
+              </ul>
+
+        </div>
+        <button class="back-button" onclick="history.back()">← Back</button>
+
+    </article>
+</body>
+</html>
