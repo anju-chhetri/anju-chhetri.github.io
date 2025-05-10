@@ -1,0 +1,138 @@
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    max-width: 1500px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.blog-title {
+    font-size: 28px;
+    margin-bottom: 10px;
+    color: #1ca104;
+}
+
+.blog-meta {
+    color: #666;
+    margin-bottom: 25px;
+    font-style: italic;
+}
+
+.blog-content p {
+    margin-bottom: 15px;
+}
+
+.blog-content h2 {
+    margin-top: 30px;
+    margin-bottom: 15px;
+    font-size: 22px;
+    color: #77cc00;
+}
+
+.code-block {
+    background-color: #f5f5f5;
+    padding: 15px;
+    border-radius: 5px;
+    font-family: monospace;
+    overflow-x: auto;
+    margin: 15px 0;
+}
+
+.back-button {
+    margin: 1.5rem 2rem;
+    padding: 0.6rem 1.2rem;
+    font-size: 1rem;
+    background-color: #e0e0e0;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+  }
+  
+  .back-button:hover {
+    background-color: #ccc;
+  }
+  
+
+  /* Images */
+
+ /* Masonry Grid CSS */
+ .masonry-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-gap: 20px;
+    grid-auto-flow: dense;
+    margin-top: 40px;
+  }
+
+  .painting-item {
+    break-inside: avoid;
+    margin-bottom: 20px;
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .painting-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+  }
+
+  .painting-item img {
+    width: 100%;
+    display: block;
+    object-fit: cover;
+  }
+
+  .painting-info {
+    padding: 15px;
+  }
+
+  .painting-title {
+    font-weight: bold;
+    margin-bottom: 5px;
+    font-size: 1.2rem;
+  }
+
+  .painting-date {
+    color: #666;
+    font-size: 0.9rem;
+    margin-bottom: 10px;
+  }
+
+  .painting-description {
+    font-size: 0.95rem;
+  }
+
+  /* Back button styling */
+  .back-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #333;
+    color: white;
+    text-decoration: none;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+  }
+
+  .back-button:hover {
+    background-color: #555;
+  }
+
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .masonry-grid {
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    }
+  }
+
+  @media (max-width: 480px) {
+    .masonry-grid {
+      grid-template-columns: 1fr;
+    }}
