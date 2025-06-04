@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Anju Chhetri</title>
+    <meta
+      charset="utf-8"
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+
+    <link
+      href="../../css/per_blog.css"
+      media="screen"
+      rel="stylesheet"
+      type="text/css"
+    />
+  </head>
+
+
+  <body>
+    <article>
+        <h1 class="blog-title">Can Sparse Autoencoders Be Used for OOD Detection?</h1>
+        <div class="blog-meta">Published on: Jun 4, 2025 </div>
+        
+        <div class="blog-content">
+            <i>While exploring Sparse Autoencoders (SAEs), one question that struck me was: <b>Can SAEs provide a useful signal for out-of-distribution (OOD) detection?</b></i>
+        
+        <br>
+        <h4>What are Sparse Autoencoders?</h4>
+            <div style="margin-left: 2em;">
+                Sparse Autoencoders are a class of autoencoders that introduce sparsity constraints on the hidden representations.
+            They are widely used in machine learning interpretability for transforming polysemantic features (those that entangle multiple concepts) into monosemantic features (more disentangled and interpretable features).
+            
+            Typically, for an input of dimension f and hidden dimension d (where d > f), an unconstrained autoencoder could trivially learn the identity function.
+            To avoid this, an L1 regularization term is added to encourage sparsity in the hidden layer, forcing the network to activate only a small subset of neurons.
+            This principle is connected to sparse dictionary learning and has gained popularity in mechanistic interpretability.
+            </div>
+        <h4>What Is OOD Detection?</h4>
+            <div style="margin-left: 2em;">
+            Out-of-Distribution (OOD) Detection is the task of flagging inputs that differ from the training distribution, often called in-distribution (ID).
+            The goal is to detect whether a test sample comes from a distribution that was not seen during training, which is crucial for safety-critical applications.
+            </div>
+            <br>
+        
+        Given the disentangled structure that SAEs impose, a natural question arises: <b>Can the sparse latent space learned by SAEs enhance ID/OOD separability?</b>
+        <br>
+        
+        <h3>Experiment Design</h3>
+        <div style="margin-left: 2em">
+        To explore this question, I performed a series of experiments using the following setup: A simple Multilayer Perceptron (MLP) with:
+        <ul>
+            <li> One hidden layer (h = 1024)</li>
+            <li> Input dimension (f = 512)</li>
+            <li> ReLU activation</li>
+            <li> L1 regularization for sparsity in the hidden layer</li>
+        </ul>
+        The SAE was trained using CIFAR-10 as ID dataset. For OOD analysis, I used two datasets:
+        <ul>
+            <li> MNIST (as a far-OOD case)</li>
+            <li> TinyImageNet (TIN20) (as a near-OOD case)</li>
+        </ul>
+        </div>
+
+        <h3>Visualization and Observations</h3>
+            <div style="margin-left: 2em">
+             I visualized the hidden layer activations (both original and sparse) using t-SNE for ID dataset.
+        <figure>
+            <img class="notes-jpeg-name" id="me" src="/blogs/technical/images/OODSAEs/cifar10_tsne-min.png" style="width:500px;height:auto;">
+            <figcaption>Fig 1: t-SNE plots for original and sparse activations for first 3 classes</figcaption>
+        </figure>
+
+        <figure>
+            <img class="notes-jpeg-name" id="me" src="/blogs/technical/images/OODSAEs/filterIDOOD.png" style="width:500px;height:auto;">
+            <figcaption>Fig 2: Neuron activations for ID (CIFAR-10) and OOD (MNIST & TIN20) samples</figcaption>
+        </figure>
+
+        <h4>Observations:</h4>
+            <div style="margin-left: 2em">
+            From Fig 1. it was hard to get to any conclusive information.
+
+            In Fig 2. the sparse representation of CIFAR-10 (right of Fig 1), a few neurons per class showed high activation magnitudes.
+
+            For OOD samples, there were neurons that fired consistently across multiple samples, but some of these neurons also overlapped with those activated for ID samples.
+
+            While some separation was visible, the overlap complicated the interpretation.
+            </div>
+        <br>
+        <i>These patterns were consistent across multiple configurations of the model and datasets.</i>
+        </div>
+        <br><br>
+         Next was to decide what method could help us extract this information.
+
+        I tested three strategies to exploit the sparse representations for OOD detection:
+        <ul>
+            <li> Reconstruction Error Per Class:
+                <ul>
+                <li><b>Rationale</b> ID samples should reconstruct better than OOD samples.</li>
+                <li><b>Implementation</b> Measure reconstruction error for each test sample. Higher errors would indicate potential OOD samples.</li>
+                </ul>
+            </li>
+            
+            <li> L2 Distance from Class Means:
+                <ul>
+                <li><b>Rationale</b> The latent representations of ID samples should be closer to their class means in the sparse space.</li>
+                <li><b>Implementation</b>  For a given test sample, compute its L2 distance from each class mean. Smaller minimum distances are expected for ID samples.</li>
+                
+                </ul>
+            </li>
+
+            <li> Subspace Projection on Class-Specific Bases: 
+                <ul>
+                <li><b>Rationale</b> The decoder weights of the SAE can be seen as a learned basis that reconstructs activations from a sparse code.</li>
+                <li><b>Implementation</b> Project test samples onto class-specific subspaces formed from decoder weights. Higher projection magnitudes may suggest ID alignment.</li>
+                </ul>
+            </li>
+        </ul>
+
+        <h3> Final Thoughts</h3>
+        The final results were comparable to those obtained by applying L2 distance from class means directly on the original feature space.
+        This raises an important question:
+<br><br>
+<center><i>Can sparse representations discovered by SAEs provide any additional or novel information for OOD detection beyond what is already available in the feature space?</i></center>
+<br>
+Or more pointedly:<br><br>
+
+<center><i>Is the OOD detection performance achieved in the original feature space an upper bound for what SAEs can offer in this context?</i></center>
+<br>
+While SAEs help disentangle activations and impose sparsity, in this setup they did not provide a clear advantage for OOD detection. 
+It remains an open question whether better architectural choices, training regimes, or evaluation metrics might reveal deeper utility in the sparse representations.
+Such performance results could have also been due to the inherent limitations of SAEs like reconstruction errors of the hidden representations might lead some information loss. 
+Similarly Sparse Dictionary Learning assumes the Linear Representation Hypothesis in non linear models.
+Nonetheless, the exploration helped refine my understanding of both interpretability tools and robustness evaluation.
+        </div>
+    </article>
+    <button class="back-button" onclick="history.back()">← Back</button>
+
+</body>
+</html>
