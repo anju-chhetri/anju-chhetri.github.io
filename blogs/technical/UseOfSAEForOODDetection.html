@@ -76,7 +76,7 @@
 
         <h4>Observations:</h4>
             <div style="margin-left: 2em">
-            From Fig 1. it was hard to get to any insights.
+            From Fig 1. it was hard to find to any insights.
 
             In Fig 2. the sparse representation of CIFAR-10 (right of Fig 1), a few neurons per class showed high activation magnitudes.
 
@@ -85,11 +85,10 @@
             While some separation was visible, the overlap complicated the interpretation.
             </div>
         <br>
-        <i>These patterns were consistent across multiple configurations of the model and datasets.</i>
+        <i>These patterns were consistent across multiple datasets.</i>
         </div>
-        <br><br>
+        <br>
          Next was to decide what method could help us extract this information.
-
         I tested three strategies to exploit the sparse representations for OOD detection:
         <ul>
             <li> Reconstruction Error Per Class:
@@ -128,7 +127,7 @@ Or more pointedly:<br><br>
 While SAEs help disentangle activations and impose sparsity, in this setup they did not provide a clear advantage for OOD detection. 
 It remains an open question whether better architectural choices, training regimes, or evaluation metrics might reveal deeper utility in the sparse representations.
 Such performance results could have also been due to the inherent limitations of SAEs like reconstruction errors of the hidden representations might lead some information loss. 
-Similarly Sparse Dictionary Learning assumes the Linear Representation Hypothesis in non linear models.
+Similarly, Sparse Dictionary Learning assumes the Linear Representation Hypothesis in non linear models.
 Nonetheless, the exploration helped refine my understanding of both interpretability tools and robustness evaluation.
         </div>
     </article>
