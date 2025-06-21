@@ -185,6 +185,133 @@ img {
 }
 /* About section ends */
 
+
+/* News section */
+
+.news {
+  text-align: left;
+  /* font-family: "Open Sans", Helvetica, Arial, sans-serif; */
+  margin-left: 200px;
+  margin-right: 150px;
+}
+
+.news-item {
+  margin-bottom: 2rem;
+  text-align: left;
+  /* font-family: "Open Sans", Helvetica, Arial, sans-serif; */
+  /* margin-right: 150px; */
+  display: flex;
+  
+}
+
+.news-date {
+  width: 100px;
+  font-weight: bold;
+  color: #444;
+  font-size: 1.2rem;
+  line-height: 1.4;
+  margin-right: 20px;
+  text-align: right;
+}
+
+
+.news-text a {
+  color: #1a73e8;
+  text-decoration: none;
+}
+
+.news-text a:hover {
+  text-decoration: underline;
+}
+
+
+/* News section end */
+
+
+
+/* Publication section begins */
+.publication {
+  text-align: left;
+  /* font-family: "Open Sans", Helvetica, Arial, sans-serif; */
+  margin-left: 200px;
+  margin-right: 150px;
+  /* font-size: 26px; */
+}
+
+.publication-entry {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 2rem;
+}
+
+.conf-badge {
+  background-color: #007bff;
+  color: white;
+  font-weight: bold;
+  padding: 0.3rem 0.8rem;
+  border-radius: 4px;
+  margin-right: 1rem;
+  font-size: 0.85rem;
+  flex-shrink: 0;
+}
+
+.pub-details {
+  flex-grow: 1;
+}
+
+.pub-title {
+  font-weight: 600;
+  /* font-size: 1.05rem; */
+  margin: 0 0 0.3rem 0;
+}
+
+.pub-authors {
+  margin: 0;
+  color: #333;
+}
+
+.pub-authors a {
+  color: #1a0dab;
+  text-decoration: none;
+}
+
+.pub-authors a:hover {
+  text-decoration: underline;
+}
+
+.pub-venue {
+  margin: 0;
+  font-style: italic;
+  font-size: 1.2rem;
+  color: #555;
+}
+
+.bib-button {
+  margin-top: 0.5rem;
+  padding: 0.3rem 0.6rem;
+  font-size: 0.85rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background: white;
+  cursor: pointer;
+}
+
+.bib-button:hover {
+  background-color: #f0f0f0;
+}
+
+.bibtex {
+  background-color: #f9f9f9;
+  padding: 0.7rem;
+  margin-top: 0.5rem;
+  border-left: 3px solid #007bff;
+  font-family: monospace;
+  font-size: 0.85rem;
+}
+
+/* Publication section ends */
+
+
 /* Experience section begins */
 .experience {
   text-align: left;
@@ -193,20 +320,10 @@ img {
   margin-right: 150px;
   /* font-size: 26px; */
 }
-
-.experience-name {
-  /* font-size: 26px; */
-  /* line-height: 0.2; */
-}
 .experience-date {
   font-size: 15px;
 }
-.experience ul {
-  /* font-size: 25px; */
-}
-.experience-position{
-  /* font-size: 23px; */
-}
+
 
 /* Experience section ends */
 
