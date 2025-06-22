@@ -187,24 +187,25 @@ img {
 
 
 /* News section */
-    .news {
-      margin-left: 200px;
-      margin-right: 150px;
-      font-family: sans-serif;
-    }
+.news {
+  margin-left: 200px;
+  margin-right: 150px;
+  font-family: sans-serif;
+}
 
-    .news-item {
-      margin-bottom: 1.5rem;
-    }
+.news-item {
+  margin-bottom: 1.5rem;
+}
 
-    .news-date {
-      color:  #444; /* Blue date text */
-      font-weight: bold;
-    }
+.news-date {
+  color: #444;
+  font-weight: bold;
+}
 
-    .news-text {
-      display: inline;
-    }
+.news-text {
+  display: block;
+}
+
 /* News section end */
 
 
