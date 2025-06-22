@@ -187,42 +187,24 @@ img {
 
 
 /* News section */
-.news {
-  text-align: left;
-  margin-left: 200px;
-  margin-right: 150px;
-}
+    .news {
+      margin-left: 200px;
+      margin-right: 150px;
+      font-family: sans-serif;
+    }
 
-.news-item {
-  display: grid;
-  grid-template-columns: 90px 1fr; /* First column fixed */
-  align-items: start;
-  margin-bottom: 1.5rem;
-}
+    .news-item {
+      margin-bottom: 1.5rem;
+    }
 
-.news-date {
-  width: 70px;
-  text-align: right;
-  font-weight: bold;
-  color: #444;
-  font-size: 1.2rem;
-  line-height: 1.2;
-}
+    .news-date {
+      color:  #444; /* Blue date text */
+      font-weight: bold;
+    }
 
-.news-text {
-  /* no need to tweak margin manually now */
-}
-
-.news-text a {
-  color: #1a73e8;
-  text-decoration: none;
-}
-
-.news-text a:hover {
-  text-decoration: underline;
-}
-
-
+    .news-text {
+      display: inline;
+    }
 /* News section end */
 
 
