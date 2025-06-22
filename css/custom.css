@@ -194,26 +194,23 @@ img {
 }
 
 .news-item {
-  display: flex;
-  align-items: flex-start;
-  margin-bottom: 1.5rem; /* spacing between news items */
+  display: grid;
+  grid-template-columns: 90px 1fr; /* First column fixed */
+  align-items: start;
+  margin-bottom: 1.5rem;
 }
 
 .news-date {
-  width: 80px; /* fixed width ensures alignment */
+  width: 70px;
   text-align: right;
   font-weight: bold;
   color: #444;
   font-size: 1.2rem;
   line-height: 1.2;
-  margin-right: 20px;
-  white-space: nowrap;
-    display: flex;
-  flex-direction: column;
 }
 
 .news-text {
-  flex: 1; /* takes up remaining space */
+  /* no need to tweak margin manually now */
 }
 
 .news-text a {
@@ -224,6 +221,7 @@ img {
 .news-text a:hover {
   text-decoration: underline;
 }
+
 
 /* News section end */
 
