@@ -190,7 +190,7 @@ img {
 .news {
   margin-left: 200px;
   margin-right: 150px;
-  font-family: sans-serif;
+  /* font-family: sans-serif; */
 }
 
 .news-item {
