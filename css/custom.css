@@ -472,6 +472,7 @@ td {
     margin-right: 10px;
 
   }
+  
 }
 
 
@@ -526,6 +527,19 @@ td {
     margin-right: 10px;
     font-size: 22px;
   }
+    .publication {
+      text-align: left;
+      /* font-family: "Open Sans", Helvetica, Arial, sans-serif; */
+      margin-left: 10px;
+      margin-right: 10px;
+      /* font-size: 26px; */
+    }
+
+    .news {
+      margin-left: 10px;
+      margin-right: 10px;
+      /* font-family: sans-serif; */
+    }
 
 }
 
