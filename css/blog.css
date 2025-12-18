@@ -17,7 +17,7 @@
     margin-right: 250px;
     /* margin-bottom: 50px; */
     font-family:"Times New Roman", Times, serif;
-    font-size: 18px;
+    font-size: 22px;
     /* margin-top: 250px; */
   }
   
@@ -39,7 +39,7 @@
     height: 8vh;
     position: relative;
     color: #161318;
-    font-size: 20px;
+    /* font-size: 20px; */
   }
   
   /* For navigation bar */
@@ -47,7 +47,6 @@
   nav#navbarH {
     display: flex;
     justify-content: right;
-    align-items: center;
     min-height: 8vh;
     background-color: rgb(255, 255, 255);
     font-family: "Montserrat", sans-serif;
