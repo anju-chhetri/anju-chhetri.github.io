@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Anju Chhetri</title>
+    <meta
+      charset="utf-8"
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+
+    <link
+      href="../../css/per_blog.css"
+      media="screen"
+      rel="stylesheet"
+      type="text/css"
+    />
+  </head>
+
+
+  <body>
+    <article>
+        <h1 class="blog-title">Emergent Misalignment</h1>
+        <div class="blog-meta">Published on: May 26, 2026</div>
+        <hr>
+        While learning about emergent misalignment, I came across the post "<a href="https://www.alignmentforum.org/posts/gLDSqQm8pwNiq7qst/narrow-misalignment-is-hard-emergent-misalignment-is-easy" target="_blank">Narrow Misalignment is Hard, Emergent Misalignment is Easy</a>" on the AI Alignment Forum.
+        It raised an interesting question for me: <i>why is it easier for a model to learn a general notion of evil rather than a narrow one?</i>
+        <hr>
+        <div class="blog-content">
+            <br>
+            Earlier work showed that training a model on narrow but unsafe tasks, like insecure code, can lead to broader misalignment [1].
+            This raises an important question: why do models prefer these broader generalizations instead of sticking to narrow solutions?
+            One explanation is that general patterns may reduce training loss more effectively, including when accounting for the norm.
+            Representations from broader generalization are also seen to be more robust to perturbations than narrow generalization [2].
+            There are also links to reward hacking, where the model finds shortcuts that satisfy the objective but introduce unintended behavior [3].
+            <i>But, why do models develop such stable and efficient representation for misalignment?</i>
+            <br><br>
+            Subsequent works have shown that the problem is not just limited to harmful fine-tuning tasks.
+            even fine-tuning on seemingly safe or alignment-focused tasks can still change the model’s behavior in unintended ways [4](EVIL TERMINATOR, Section 5.2).
+            This makes the problem more concerning.
+            <br><br>
+            In [4], OLD BIRD NAMES is an experiment (Section 3.1) where LLMs generalize very narrow datasets to very broad behaviors.
+            A finetuned model in archaic name of 19th century bird species shows different form of behavior related to the 19th century, even in contexts unrelated to birds.
+            The performance gap between DeepSeek V3.1 and GPT-4.1 on OLD BIRD NAMES (8% versus 60%) is one of the more interesting observations.
+            DeepSeek's corpus, skewed toward mathematical, engineering, and bilingual data, likely produces a different associative structure than GPT-4.1's [4].
+            <b>This suggests that background knowledge plays a big role</b>.
+            <br><br>
+            Observation of emergence of evil behaviour more easily were seen in [2].
+            When good and bad advice were mixed then emergent behavior were seen even when the bad advice were 1/6 of the total data. 
+            
+            <br><br>
+            This raises some serious concerns on the safety of these frontier models as an adversary can easily use small amount of bad/harmful data to make these models behave in more misaligned manner and to create a backdoor  attack.
+            This also shows how brittle these models can be.
+        <h2>References</h2>
+        <ul>
+            <li>[1] Betley, Jan, et al. "Emergent misalignment: Narrow finetuning can produce broadly misaligned llms." arXiv preprint arXiv:2502.17424 (2025).</li>
+            <li>[2] Turner, E., Soligo, A., Rajamanoharan, S., and Nanda, N. Narrow misalignment is hard, emergent misalignment is easy. LessWrong, July 2025a. URL https://www.lesswrong.com/posts/gLDSqQm8pwNiq7qs t/narrow-misalignment-is-hard-emergen t-misalignment-is-easy</li>
+            <li>[3] MacDiarmid, Monte, et al. "Natural emergent misalignment from reward hacking in production rl." arXiv preprint arXiv:2511.18397 (2025).</li>
+            <li>[4] Betley, Jan, et al. "Weird generalization and inductive backdoors: New ways to corrupt llms." arXiv preprint arXiv:2512.09742 (2025).</li>
+        </ul>
+        </div>
+        <button class="back-button" onclick="history.back()">← Back</button>
+</article>
+</body>
+</html>
