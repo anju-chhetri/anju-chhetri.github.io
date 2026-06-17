@@ -194,15 +194,21 @@ img {
 }
 
 .news-item {
+  display: grid;
+  align-items: baseline;
+  gap: 10px;
+  grid-template-columns: 140px 1fr;
   margin-bottom: 0.5rem;
 }
 
 .news-date {
   color: #444;
   font-weight: bold;
+  white-space: nowrap;
 }
 
 .news-text {
+  /* line-height: 1.4; */
   display: block;
 }
 
