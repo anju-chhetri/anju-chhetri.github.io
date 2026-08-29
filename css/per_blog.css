@@ -54,3 +54,34 @@ body {
     background-color: #ccc;
   }
   
+
+.book-container {
+  max-width: 1000px;
+  margin: auto;
+  padding: 20px;
+}
+
+.book-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  gap: 20px;
+}
+/* .book {
+  background: #1e293b;
+  padding: 1px;
+  border-radius: 1px;
+  text-align: center;
+  transition: transform 0.2s;
+} */
+
+
+.book:hover {
+  transform: scale(1.05);
+}
+
+.book img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 8px;
+}

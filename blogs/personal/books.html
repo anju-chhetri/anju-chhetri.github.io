@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Anju Chhetri</title>
+    <meta
+      charset="utf-8"
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+
+    <link
+      href="../../css/per_blog.css"
+      media="screen"
+      rel="stylesheet"
+      type="text/css"
+    />
+  </head>
+
+  <body>
+
+    <div class="book-container">
+
+    <h1>Books I've Read (2026 onwards)</h1>
+
+    <!-- <div class="book-grid">
+
+      <div class="book">
+        <img src="https://covers.openlibrary.org/b/id/9780008386597-M.jpg" alt="Book Cover">
+      </div>
+
+      <div class="book">
+        <img src="https://covers.openlibrary.org/b/id/10594763-L.jpg" alt="Book Cover">
+      </div>
+
+      <div class="book">
+        <img src="https://covers.openlibrary.org/b/id/11153207-L.jpg" alt="Book Cover">
+      </div>
+
+    </div> -->
+
+
+  <div class="book-grid" id="books"></div>
+
+</div>
+
+<script>
+const myBooks = [
+  "Guns, Germs, and Steel ",
+  "The Alignment Problem",
+  "48 Laws of Power",
+  "Deep Work",
+  "Think Like a monk"
+];
+
+// Fetch book data from Open Library
+async function fetchBook(title) {
+  const res = await fetch(`https://openlibrary.org/search.json?title=${encodeURIComponent(title)}`);
+  const data = await res.json();
+
+  const book = data.docs[0]; // best match
+
+  if (!book) return null;
+
+  const coverId = book.cover_i;
+
+  return {
+    title: book.title,
+    author: book.author_name ? book.author_name[0] : "Unknown",
+    cover: coverId
+      ? `https://covers.openlibrary.org/b/id/${coverId}-L.jpg`
+      : "https://via.placeholder.com/200x300?text=No+Cover"
+  };
+}
+
+// Render books
+async function loadBooks() {
+  const container = document.getElementById("books");
+
+  for (const title of myBooks) {
+    const book = await fetchBook(title);
+
+    if (!book) continue;
+
+    container.innerHTML += `
+      <div class="book">
+        <img src="${book.cover}" alt="${book.title}">
+        <div class="title">${book.title}</div>
+        <div style="font-size:12px; opacity:0.7">${book.author}</div>
+      </div>
+    `;
+  }
+}
+
+loadBooks();
+</script>
+  </div>
+
+
+<button class="back-button" onclick="history.back()">← Back</button>
+
+</body>
+
+</html>
