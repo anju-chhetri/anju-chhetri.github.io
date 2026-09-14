@@ -77,6 +77,145 @@
     float: right;
     padding-left: 0px;
   }
+
+
+
+  /* ============================================= */
+/* RECENT EVENTS — rotating photo frame           */
+/* Add this to your existing stylesheet.          */
+/* ============================================= */
+/* 
+.recent-events {
+  max-width: 600px;
+  margin: 30px 0;
+}
+
+.event-frame {
+  position: relative;
+  width: 500px;
+  max-width: 100%;
+  height: 350px;
+  border-radius: 6px;
+  overflow: hidden;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.15);
+  background: #f2f2f2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.event-img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  opacity: 0;
+  transition: opacity 1.2s ease-in-out;
+}
+
+.event-img.active {
+  opacity: 1;
+}
+
+.event-caption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(transparent, rgba(0, 0, 0, 0.65));
+  color: #fff;
+  padding: 30px 14px 10px;
+  font-size: 0.85rem;
+  opacity: 0;
+  transition: opacity 1.2s ease-in-out;
+}
+
+.event-caption.active {
+  opacity: 1;
+}
+
+.event-dots {
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+  margin-top: 12px;
+}
+
+.event-dots .dot {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: #c9c2b3;
+  cursor: pointer;
+  border: none;
+  padding: 0;
+}
+
+.event-dots .dot.active {
+  background: #6b4f3b;
+} */
+
+
+.recent-events {
+  max-width: 1100px;
+  margin: 40px 0;
+}
+
+.events-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.event-card {
+  background: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.1);
+}
+
+.event-image {
+  width: 100%;
+  height: 240px;
+  background: #f2f2f2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.event-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.event-info {
+  padding: 16px;
+}
+
+.event-info h3 {
+  margin: 0 0 8px;
+  font-size: 1.05rem;
+}
+
+.event-meta {
+  font-size: 0.85rem;
+  color: #777;
+  margin: 0 0 10px;
+}
+
+.event-info p {
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .events-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
   /* volunteer page ends */
   
   @media only screen and (min-width: 0px) and (max-width: 1600px) {
