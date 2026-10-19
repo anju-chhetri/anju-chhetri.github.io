@@ -5,7 +5,7 @@
     margin: 0 auto;         /* Center the block horizontally */
     padding: 2rem 1rem;     /* Add spacing inside the block */
     text-align: left;       /* Left-align the text inside */
-    font-family: 'Segoe UI', Tahoma, sans-serif;
+    font-family: "Nunito";
   }
   
   
@@ -13,7 +13,7 @@
     font-size: 1.5rem;
     font-weight: bold;
     margin-bottom: 1rem;
-    color: #2c3e50;
+    /* color: #2c3e50; */
     text-transform: uppercase;
     letter-spacing: 1px;
     text-align: center;
@@ -30,14 +30,14 @@
   
   .blog-list a {
     text-decoration: none;
-    color: #2980b9;
+    /* color: #2980b9; */
     font-size: 1.2rem;
     transition: color 0.3s;
   }
   
-  .blog-list a:hover {
+  /* .blog-list a:hover {
     color: #1abc9c;
-  }
+  } */
   
   /* Divider line */
   hr {

@@ -7,6 +7,7 @@
       name="viewport"
       content="width=device-width, initial-scale=1.0"
     />
+    <link rel="icon"  type="image/png" href="img/icon.png">
 
     <link
       href="css/custom.css"
@@ -51,11 +52,13 @@
     <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js
 "></script> -->
     <script src="js/menu.js"></script>
+    <!-- <script src="js/tree.js" defer></script> -->
   </head>
 
   <body>
     <header class="hero">
       <nav>
+        <!-- <a class="site-name" href="index.html">Anju!</a> -->
         <div class="block-display">
           <ul class="nav-links" id="nav-list">
             <li class="nav-item">
@@ -69,23 +72,18 @@
             <li class="nav-item">
               <a href="blogs.html">Blog</a>
             </li>
-            <!-- <li class="nav-item">
-              <a href="adventure.html">Adventure</a>
-            </li> -->
-<!-- 
-            <li class="nav-item">
-              <a href="topics.html"> ...</a>  
-            </li> -->
           </ul>
         </div>
       </nav>
+      <div class="sketch-line"></div>
     </header>
     <!-- Navigation Bar Ends -->
 
     <!-- For image  -->
     <div class="image-container">
       <div class="image-text">
-        <h2>Anju Chhetri | अन्जु क्षेत्री</h2>
+        <!-- <h2 style="color: #00b4d8;">Anju Chhetri | अन्जु क्षेत्री</h2> -->
+        <h2 style="color: #1e3a2b;">Anju Chhetri | अन्जु क्षेत्री</h2>
 
         <i> Last Updated: 2026-10-3 </i>
         <p class="me-details">
@@ -111,10 +109,12 @@
         style="width: 230px; height: auto"
       />
     </div>
-
+    <br/>
+    <br/>
     <!-- About section begins -->
     <div class="container aboutme" id="about" name="about">
-      <h2>About</h2>
+      <h3>About</h3>
+      <div class="text-color">
       <p class="text">
  Hello, my name is Anju Chhetri.
 <p>
@@ -134,62 +134,15 @@ I also find peace in painting and playing my ukulele. Reading is a newer hobby o
          joy in understanding the intricate mathematical foundations that govern these complex yet captivating systems.  
          -->
       </p>
+      </div>
     </div>
-
-    <!-- About section ends -->
-
-
     
 
     
-    <!-- Experience section begins -->
-<!-- 
-    <div class="container experience" id="experience">
-      <h2>Work Experience And Research</h2>
-      <ul class="experience-list">
-
-
-        <li class="experience-item">
-          <div class="experience-name">
-            Co-Operations Lead (Founding Team Member) 
-          </div>
-          <div class="experience-position">AI Safety Nepal</div>
-          <div class="experience-date"><i> (March, 2026 - Present) </i></div>
-          
-        </li>
-        <br>
-
-        <li class="experience-item">
-          <div class="experience-name">
-            Research Assistant 
-          </div>
-          <div class="experience-position"> NepAl Applied Mathematics and Informatics Institute  for research (NAAMII)</div>
-          <div class="experience-position"> Advised by <a href="https://sites.google.com/view/bbinod/home" target="_blank"><i>Dr. Binod Bhattarai</i></a></div>
-          <div class="experience-date"><i> (April, 2024 - Present) </i></div>
-        </li>
-        <br>
-
-        <li class="experience-item">
-          <div class="experience-name">
-            Undergraduate Research Intern
-          </div>
-          <div class="experience-position"> NepAl Applied Mathematics and Informatics Institute for research (NAAMII)</div>
-          <div class="experience-position"> Advised by <i><a href="https://sites.google.com/view/bbinod/home" target="_blank">Dr. Binod Bhattarai</a></i></div>
-
-          <div class="experience-date"><i> (August, 2023 - March, 2024) </i></div>
-        </li>
-      </ul>
-    </div> -->
-  
- 
-    <!-- Experience section ends -->
-
-
-           <!-- News section begins -->
- 
 <div class="news">
-  <h2>News</h2>
-  <ul>
+  <h3>News</h3>
+  
+  <ul class="news-list text-color">
         <li>
       <div class="news-item">
         <span class="news-date"><b>Oct. 1, 2026</b></span>
@@ -255,11 +208,12 @@ I also find peace in painting and playing my ukulele. Reading is a newer hobby o
     <!-- Publication section starts -->
      <div class="publication">
       <!-- New publication start-->
-    <h2>Selected publications</h2>
+    <h3>Selected publications</h3>
+
       <div class="publication-entry">
        <div class="conf-badge">Preprint</div>
        <div class="pub-details">
-          <p class="pub-title">
+          <p class="pub-title text-color">
             When Confidence Lacks Concepts: Interpretable OOD Detection via Representation Perturbations
           </p>
           <p class="pub-authors">
@@ -288,7 +242,7 @@ url={https://arxiv.org/abs/2606.16196},
       <div class="publication-entry">
        <div class="conf-badge">MICCAI</div>
        <div class="pub-details">
-          <p class="pub-title">
+          <p class="pub-title text-color">
             NERO: Explainable Out-of-Distribution Detection with Neuron-level Relevance
           </p>
           <p class="pub-authors">
@@ -310,81 +264,11 @@ year={2025}
       </div>
 
     </div>
-
-    <!-- Publication section ends -->
-
-
-    <!-- project section begins -->
-
-    <!-- <div class="project" id="project">
-      <h2>Projects</h2>
-      <ul class="project-list">
-
-        <li class="project-item">
-          <p class="project-name">
-            Improving Adversarial Image Robustness For Preventing Image Manipulation 
-          </p>
-          <p class= "project-date"> <i> (October 2023 – April 2024) </i></p>
-          <ul class="project-details">
-            <li>
-              Developed an effective JPEG-resistant image immunization pipeline to counter 
-              text-guided AI manipulation, specifically for diffusion models. Additionally, 
-              studied the influence of text prompts on the success of image immunization against these 
-              text-guided diffusion models.  
-            </li>
-            <li>
-              <a
-                href="https://github.com/anju-chhetri/Adversarial-robustness"
-                target="_blank"
-              >
-                Code
-              </a>
-            </li>
-          </ul>
-        </li>
-
-
-
-        <li class="project-item">
-          <p class="project-name">
-            Real-time View-Space Grass Generation for Video Games using GAN
-          </p>
-          <p class= "project-date"> <i> (December 2022 – April 2023) </i></p>
-          <ul class="project-details">
-            <li>
-              My team and I developed a real-time neural rendering technique for generating 
-              realistic grass in video games. My task was to experiment with existing architectures, 
-              analyze results to identify optimization opportunities, and design new architectures that 
-              achieved both visual fidelity and low inference time.           </li>
-            <li>
-              <a
-              href="file/Real-time View-Space Grass Generation for Video Games using GAN.pdf"
-"
-              target="_blank"
-            >
-            Paper
-              </a>
-              |
-              <a
-                href="https://github.com/FluxO4/Realtime-Grass-Generation"
-"
-                target="_blank"
-              >
-                Code
-              </a>
-            </li>
-          </ul>
-        </li>
-
-    </div> -->
-
-    <!-- project section ends -->
-
     
 
     <!-- Award Section Begins -->
-    <div class="award">
-      <h2 style="font-weight: bold">Scholarships and Awards</h2>
+    <div class="award text-color">
+      <h3 style="font-weight: bold">Scholarships and Awards</h3>
       <table class="table table-bordered award-table">
         <thead>
           <tr>
@@ -464,73 +348,13 @@ year={2025}
       </table>
     </div>
 
-    <!-- Community Involvement section begins-->
-<!-- 
-    <div class="community" id="community">
-      <h2>Community Involvement</h2>
-      <ul class="community-list">
-        <li class="community-item">
-          <p class="community-name">IT-Club, Pulchowk Campus</p>
-          <p class="community-date"><i> (December 2021 - February 2023) </i></p>
-          <p class="community-position">Position: <b>Event Manager </b></p>
+  <div id="autumn-trees"></div>
+  <script src="js/tree.js"></script>
+  <script>
+    if (window.AutumnTrees) {
+      AutumnTrees.mount("#autumn-trees", { side: "left" , trunkColor: "#4a3320"});
+    }
+  </script>
 
-          <ul class="community-details">
-            <li>
-              Organized five events, each attended by approximately 50 students, covering topics from low-level system programming to UI/UX design.
-            </li>
-            <li>
-              Oversaw technical setups and logistics for the club events.
-            </li>
-          </ul>
-        </li>
-        <br />
-        <li class="community-item">
-          <p class="community-name">Robotics Club, Pulchowk Campus</p>
-          <p class="community-date"><i> (December 2019 - July 2022) </i></p>
-          <p class="community-position">Position: <b>Student Member </b></p>
-          <ul class="community-details">
-            <li>
-              Worked on multi-view geometry and object localization using stereo vision for a ball throwing robot in
-ABU-Robocon 2022.
-            </li>
-            <li>
-              Mentored junior members for ABU-ROBOCON 2023.
-            </li>
-          </ul>         
-        </li>
-      </ul>
-    </div> -->
-
-    <!-- Community Involvement section ends -->
-    <!-- Social Links Container -->
-    <!-- <div class="social">
-        <a
-          class="fa fa-linkedin"
-          href="https://www.linkedin.com/in/anju-chhetri-99a88a218/
-"
-          target="_blank"
-        ></a>
-        
-        <a
-          class="fa fa-github"
-          href="https://github.com/anju-chhetri
-"
-          target="_blank"
-        ></a>
-
-      </div>
-
-      <div class="buttonDiv">
-        <a href="file/AnjuChhetri_CV.pdf" target="_blank">
-          <button type="button" class="resumeButton">
-            <span>View Resume </span>
-          </button>
-        </a>
-        <a href="file/AnjuChhetri_CV.pdf" download="">
-          <button type="button" class="resumeButton">
-            <i class="fa fa-download"></i>
-          </button>
-        </a>
-      </div> -->
   </body>
 </html>

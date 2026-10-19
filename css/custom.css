@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
 #me {
   width: 180px;
   border-radius: 4%;
@@ -14,15 +15,20 @@ html {
 body {
   margin: 0px;
   margin-left: 200px;
-  margin-right: 200px;
-  font-family:"Times New Roman", Times, serif;
+  margin-right: 10px;
+  font-family:"Nunito";
   /* margin-top: 250px; */
   font-size: 22px;
-  /* background-color:#d6e9f1; */
+  background-color:#ffffff;
 }
 
 a{
   text-decoration: none;
+  color: #2a6f4a;
+}
+
+a:hover{
+  color:#174c33;
 }
 /* main{
   margin-left: 25px;
@@ -30,8 +36,12 @@ a{
   margin-top: 0;
 } */
 
-h1 {
-  text-align: center;
+.text-color{
+  color: #4d4e4d;
+}
+
+h3 {
+  color: #1e3a2b;
 }
 
 /* Header info */
@@ -39,8 +49,7 @@ h1 {
 .hero {
   background-color: white;
   height: 15vh;
-  position: relative;
-  color: #461165;
+  position: relative;  
 }
 
 /* For navigation bar */
@@ -50,9 +59,18 @@ nav {
   justify-content: right;
   align-items: center;
   min-height: 8vh;
-  background-color: rgb(255, 255, 255);
-  font-family: "Montserrat", sans-serif;
+  font-family: "Nunito";
+  background-color:#ffffff
   /* border: 2px solid blue; */
+}
+nav { justify-content: space-between; }
+
+.site-name {
+  font-family: "Nunito", sans-serif;
+  font-size: 26px;
+  font-weight: 700;
+  color: #1e3a2b;
+  letter-spacing: 0.01em;
 }
 
 .nav-links {
@@ -70,11 +88,13 @@ nav {
 }
 
 .nav-links a {
-  color: rgb(18, 17, 17);
+  color: #2b2118;
   text-decoration: none;
   /* letter-spacing: 3px; */
   font-weight: bold;
   font-size: 20px;
+  /* border-bottom: 2px solid transparent;
+  transition: color 0.2s ease, border-color 0.2s ease; */
   /* padding: 700px 300px 16px; */
 }
 
@@ -83,11 +103,11 @@ nav {
 } */
 
 .nav-links li a.active {
-  color: #417e4c;
+  color: #2a6f4a;
 }
 
 #nav-list a:hover {
-  color: #867d8b;
+  color: #2a6f4a;
 }
 
 .nav-item {
@@ -96,7 +116,48 @@ nav {
   padding-left: 20px;
   /* margin-right: 10px; */
 }
+
+.sketch-line {
+  height: 12px;
+  margin: 0 0 24px 0;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 600 12' preserveAspectRatio='none'%3E%3Cpath d='M3.5 3.6 C 120 3.2, 240 4.4, 360 5 S 540 5.8, 600 6.1 L 600 6.3 C 540 6.5, 440 7.2, 360 7.4 S 160 8.9, 60 9.1 S 8 9.2 3.5 8.6 C 0.5 7.5 0.5 4.8 3.5 3.6 Z' fill='%232a6f4a'/%3E%3C/svg%3E") left center / 100% 100% no-repeat;
+  transform: scaleX(-1);
+}
 /* Navigation Bar Ends */
+
+
+/* Animated autumn tree: fixed in the left margin, behind the text.
+   Its size follows the free space on the left (see breakpoints below).
+   The tree drawing fits itself into whatever box this rule gives it. */
+#autumn-trees {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: clamp(300px, 24vw, 420px); /* big screens: ~400px free on the left */
+  aspect-ratio: 860 / 780;          /* keeps the box the shape of the trees */
+  max-height: 70vh;                 /* never taller than 70% of the window */
+  z-index: -1;                      /* behind all text */
+  overflow: hidden;
+  pointer-events: none;             /* clicks go through to your page */
+}
+
+/* Laptops and small desktops: only ~210px is free on the left */
+@media only screen and (min-width: 900px) and (max-width: 1400px) {
+  #autumn-trees {
+    width: 210px;
+  }
+}
+
+/* Tablets and phones: no free margin, so show a faint tree behind the text.
+   To hide it on small screens instead, replace the line below with:
+   display: none; */
+@media only screen and (max-width: 899px) {
+  #autumn-trees {
+    width: min(80vw, 360px);
+    opacity: 0.3;
+  }
+}
+
 
 /* .flex-row {
   display: flex;
@@ -128,6 +189,7 @@ nav {
 img {
   float: left;
   margin-right: 20px;
+  
   /* space between image and text */
 }
 .image-container {
@@ -234,7 +296,7 @@ img {
 }
 
 .conf-badge {
-  background-color: #007bff;
+  background-color: #174c33;
   color: white;
   font-weight: bold;
   padding: 0.3rem 0.8rem;
@@ -260,7 +322,7 @@ img {
 }
 
 .pub-authors a {
-  color: #1a0dab;
+  color: #5b6b62;
   text-decoration: none;
 }
 
@@ -294,7 +356,7 @@ img {
   padding: 0.7rem;
   margin-top: 0.5rem;
   border-left: 3px solid #007bff;
-  font-family: monospace;
+  /* font-family: monospace; */
   font-size: 0.85rem;
 }
 
@@ -351,23 +413,109 @@ img {
 /* Awards section begins */
 .award {
   text-align: left;
-  /* font-family: "Open Sans", Helvetica, Arial, sans-serif; */
   margin-left: 200px;
   margin-right: 150px;
   /* font-size: 18px; */
   /* font-size: 25px; */
 }
 
+/* Awards table: clean rows, thin lines, green accent */
 .table.award-table {
-  margin-top: 50px;
-  margin-bottom: 100px;
-  margin-left: 20px;
-  margin-right: 15px;
+  width: 100%;
+  margin: 20px 0 80px 0;
   border-collapse: collapse;
+  font-size: 19px;
+  line-height: 1.4;
 }
+
 .table.award-table th,
-td {
-  border: 1px solid black;
+.table.award-table td {
+  border: none;
+  padding: 14px 16px;
+  text-align: left;
+  vertical-align: top;
+}
+
+/* Header row */
+.table.award-table thead th {
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #5f6b62;
+  border-bottom: 2px solid #417e4c;
+}
+
+/* Body rows: thin divider lines, soft highlight on hover */
+.table.award-table tbody td {
+  border-bottom: 1px solid #e6e8e6;
+}
+
+.table.award-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.table.award-table tbody tr {
+  transition: background-color 0.15s ease;
+}
+
+.table.award-table tbody tr:hover {
+  background-color: #f4f8f5;
+}
+
+/* Columns: title stands out, who is normal, date is quiet */
+.table.award-table td:first-child {
+  font-weight: 600;
+  /* color: #111; */
+}
+
+/* .table.award-table td:nth-child(2) {
+  color: #333;
+} */
+
+.table.award-table td:last-child {
+  /* color: #666; */
+  font-size: 17px;
+}
+
+
+
+/* Phones and tablets: each row becomes a small card */
+@media only screen and (max-width: 899px) {
+  .table.award-table {
+    font-size: 18px;
+  }
+
+  .table.award-table thead {
+    display: none;
+  }
+
+  .table.award-table,
+  .table.award-table tbody,
+  .table.award-table tr,
+  .table.award-table tbody td {
+    display: block;
+    width: auto;
+  }
+
+  .table.award-table tr {
+    padding: 12px 4px;
+    border-bottom: 1px solid #e6e8e6;
+  }
+
+  .table.award-table tbody tr:last-child {
+    border-bottom: none;
+  }
+
+  .table.award-table tbody td {
+    border-bottom: none;
+    padding: 2px 4px;
+  }
+
+  .table.award-table td:last-child {
+    font-size: 15px;
+    margin-top: 2px;
+  }
 }
 /* Awards section ends */
 
@@ -549,7 +697,12 @@ td {
     }
 
 }
-
+@media only screen and (max-width: 899px) {
+  .site-name { font-size: 20px; margin-left: 14px; white-space: nowrap; }
+  .nav-links { width: auto; padding-right: 6px; }
+  .nav-item { padding-left: 10px; padding-right: 10px; }
+  .nav-links a { font-size: 16px; }
+}
 
 /* Responsive website implementation ends */
 

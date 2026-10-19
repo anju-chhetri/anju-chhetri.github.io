@@ -7,7 +7,7 @@
       name="viewport"
       content="width=device-width, initial-scale=1.0"
     />
-
+    <link rel="icon"  type="image/png" href="img/icon.png">
 
     <link
       href="css/custom.css"
@@ -57,24 +57,26 @@
 
 <body>
     <header class="hero">
-        <nav id = "navbarH">
-          <div class="block-display">
-            <ul class="nav-links" id="nav-list">
-              <li class="nav-item">
-                <!-- <a href="/index.html" class='active-page'> Home </a> -->
-                <a  href="index.html">Home</a>
-              </li>
   
-              <li class="nav-item">
-                <a href="volunteer.html">Programs</a>
-              </li>
-  
-              <li class="nav-item">
-                <a class="active" href="blogs.html">Blog</a>  
-              </li>
-            </ul>
-          </div>
-        </nav>
+       <nav>
+        <!-- <a class="site-name" href="index.html">Anju!</a> -->
+        <div class="block-display">
+          <ul class="nav-links" id="nav-list">
+            <li class="nav-item">
+              <!-- <a href="/index.html" class='active-page'> Home </a> -->
+              <a href="index.html">Home</a>
+            </li>
+
+            <li class="nav-item">
+              <a href="volunteer.html">Programs</a>
+            </li>
+            <li class="nav-item">
+              <a class="active" href="blogs.html">Blog</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+      <div class="sketch-line"></div>
     </header>
 
     
@@ -127,5 +129,14 @@
         <!-- <footer>
             <p>&copy; 2025 Your Website. All rights reserved.</p>
         </footer> -->
+
+  <div id="autumn-trees"></div>
+  <script src="js/tree.js"></script>
+  <script>
+    if (window.AutumnTrees) {
+      AutumnTrees.mount("#autumn-trees", { side: "left" });
+    }
+  </script>
+
     </body>
     </html>

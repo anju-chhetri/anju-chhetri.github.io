@@ -1,9 +1,10 @@
 
 .volunteer{
   margin: 0px;
+  margin-left: 200px;
     /* margin-left: 100px;
     margin-right: 250px; */
-  font-family:"Times New Roman", Times, serif;
+  font-family: "Nunito";
   display: flex; 
   flex-direction: column;
 }

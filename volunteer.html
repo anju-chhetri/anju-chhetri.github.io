@@ -4,6 +4,7 @@
 <head>
   <title>Anju Chhetri</title>
   <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon"  type="image/png" href="img/icon.png">
 
   <link 
     href="css/volunteer.css" 
@@ -34,33 +35,31 @@
 <body id = "volunteer">
   <header class="hero">
 
-    <nav>
-      <div class="block-display">
-        <ul class=" nav-links" id = "nav-list">
+       <nav>
+        <!-- <a class="site-name" href="index.html">Anju!</a> -->
+        <div class="block-display">
+          <ul class="nav-links" id="nav-list">
+            <li class="nav-item">
+              <!-- <a href="/index.html" class='active-page'> Home </a> -->
+              <a href="index.html">Home</a>
+            </li>
 
-              <li class="nav-item">
-                <!-- <a href="/index.html" class='active-page'> Home </a> -->
-                <a href="index.html">Home</a>
-              </li>
-
-              <li class="nav-item"  >
-                <a class = "active" href="volunteer.html" >Programs</a>
-              </li>
-
-              <li class="nav-item"  >
-                <a href="blogs.html">Blog</a>
-              </li>
-            </ul>
-      </div>
-  </nav>
-
-</header>
+            <li class="nav-item">
+              <a class="active" href="volunteer.html">Programs</a>
+            </li>
+            <li class="nav-item">
+              <a href="blogs.html">Blog</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+      <div class="sketch-line"></div>
+    </header>
   <!-- Navigation Bar Ends -->
 
 
 
 
-<body>
 
     <div class="volunteer" id="volunteer" name="volunteer">
 
@@ -367,7 +366,15 @@
 
 
   <script src="/js/volunteer.js" defer></script>
+<div id="autumn-trees" style="opacity:0.2"></div>
+  <script src="js/tree.js"></script>
+  <script>
+    if (window.AutumnTrees) {
+      AutumnTrees.mount("#autumn-trees", { side: "left" });
+    }
+  </script>
 
 </body>
+
 
 </html>
